@@ -28,3 +28,9 @@ It is created by Auwal Alhassan Abubakar on 27/10/2020.
 
 #### Shimmer for loading
 ![shimmer](https://user-images.githubusercontent.com/71941098/183285559-96da7983-9d8b-4bf9-aaa4-4aaac380ec9d.JPG)
+
+#### More Images
+![prd 2](https://user-images.githubusercontent.com/71941098/183287043-c6bad2eb-558c-4a30-a1a5-1d75bfd61f69.jpeg)
+![Bank](https://user-images.githubusercontent.com/71941098/183287046-f7282433-14c3-496d-b2be-f93ce382b1a4.jpeg)
+![Banks lst](https://user-images.githubusercontent.com/71941098/183287047-03c873e1-7cbe-4197-9d97-02379a0656c6.jpeg)
+![acc](https://user-images.githubusercontent.com/71941098/183287049-093d5483-a5de-44d0-b549-e9d49ebe2857.jpeg)
