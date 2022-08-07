@@ -1,0 +1,735 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainProductDetailsContent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
+
+    <include
+        android:id="@+id/productDetailShimmer"
+        layout="@layout/shimmer_product_detail"
+        android:visibility="visible" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/productNestedScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabExit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="1dp"
+                app:elevation="1dp"
+                app:fabSize="mini"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@drawable/ic_arrow_back"
+                app:tint="@color/textColor" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabShare"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:elevation="1dp"
+                app:elevation="1dp"
+                app:fabSize="mini"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:rippleColor="@color/colorAccent"
+                app:srcCompat="@drawable/ic_share"
+                app:tint="@color/textColor" />
+
+
+            <ProgressBar
+                android:id="@+id/videoLoadingProgress"
+                style="?android:attr/progressBarStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="1dp"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/productVideoView"
+                app:layout_constraintEnd_toEndOf="@+id/productVideoView"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/productVideoView" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fabPlayVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="?attr/colorAccent"
+                android:clickable="true"
+                android:focusable="true"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@+id/productImageSlider"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="@color/colorPrimary"
+                app:srcCompat="@drawable/ic_play_video"
+                app:tint="@color/colorPrimary" />
+
+            <com.google.android.exoplayer2.ui.PlayerView
+                android:id="@+id/productVideoView"
+                android:layout_width="match_parent"
+                android:layout_height="448dp"
+                android:elevation="0dp"
+                android:visibility="invisible"
+                app:default_artwork="@drawable/eama_logo"
+                app:fastforward_increment="3000"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:resize_mode="fill"
+                app:rewind_increment="3000"
+                app:show_timeout="1000"
+                app:use_controller="true" />
+
+            <com.smarteist.autoimageslider.SliderView
+                android:id="@+id/productImageSlider"
+                android:layout_width="match_parent"
+                android:layout_height="448dp"
+                android:elevation="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:sliderAnimationDuration="600"
+                app:sliderAutoCycleDirection="back_and_forth"
+                app:sliderAutoCycleEnabled="true"
+                app:sliderIndicatorAnimationDuration="600"
+                app:sliderIndicatorGravity="center_horizontal|bottom"
+                app:sliderIndicatorMargin="16dp"
+                app:sliderIndicatorOrientation="horizontal"
+                app:sliderIndicatorPadding="4dp"
+                app:sliderIndicatorRadius="4dp"
+                app:sliderIndicatorSelectedColor="@color/colorAccent"
+                app:sliderIndicatorUnselectedColor="@color/colorPrimary"
+                app:sliderScrollTimeInSec="1"
+                app:sliderStartAutoCycle="true">
+
+            </com.smarteist.autoimageslider.SliderView>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productImageSlider">
+
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/ratingsCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardCornerRadius="24dp"
+                    app:cardElevation="4dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingTitle"
+                    app:rippleColor="@color/colorAccent">
+
+                    <include layout="@layout/ratings_layout_one" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/moreReviewBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="Click for Reviews"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_reviews"
+                    app:iconTint="@color/textColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingsCard" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout3"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/moreReviewBtn" />
+
+
+                <TextView
+                    android:id="@+id/ratingTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="Ratings"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+
+                <RatingBar
+                    android:id="@+id/productRatingBar"
+                    style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="center_horizontal"
+                    android:numStars="5"
+                    android:rating="80"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/gradeChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:chipSpacing="24dp"
+                    app:selectionRequired="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productRatingBar"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipGradeA"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:checked="false"
+                        android:fontFamily="@font/overlock_headline"
+                        android:text="GRADE A"
+                        android:textAppearance="@style/ChipTextStyle"
+                        android:textColor="@color/textColor"
+                        app:checkedIcon="@drawable/ic_grade_1"
+                        app:checkedIconTint="@color/colorSecondary"
+                        app:checkedIconVisible="true"
+                        app:chipBackgroundColor="@color/chip_bg_tint"
+                        app:chipCornerRadius="16dp"
+                        app:chipIconEnabled="false"
+                        app:chipStrokeColor="@color/textColor"
+                        app:chipStrokeWidth="1dp"
+                        app:closeIconEnabled="false"
+                        app:rippleColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipGradeB"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:checked="false"
+                        android:fontFamily="@font/overlock_headline"
+                        android:text="GRADE B"
+                        android:textAppearance="@style/ChipTextStyle"
+                        android:textColor="@color/textColor"
+                        app:checkedIcon="@drawable/ic_grade_2"
+                        app:checkedIconTint="@color/colorSecondary"
+                        app:checkedIconVisible="true"
+                        app:chipBackgroundColor="@color/chip_bg_tint"
+                        app:chipCornerRadius="16dp"
+                        app:chipIconEnabled="false"
+                        app:chipStrokeColor="@color/textColor"
+                        app:chipStrokeWidth="1dp"
+                        app:closeIconEnabled="false"
+                        app:rippleColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipGradeC"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:checked="false"
+                        android:fontFamily="@font/overlock_headline"
+                        android:text="GRADE C"
+                        android:textAppearance="@style/ChipTextStyle"
+                        android:textColor="@color/textColor"
+                        app:checkedIcon="@drawable/ic_grade_3"
+                        app:checkedIconTint="@color/colorSecondary"
+                        app:checkedIconVisible="true"
+                        app:chipBackgroundColor="@color/chip_bg_tint"
+                        app:chipCornerRadius="16dp"
+                        app:chipIconEnabled="false"
+                        app:chipStrokeColor="@color/textColor"
+                        app:chipStrokeWidth="1dp"
+                        app:closeIconEnabled="false"
+                        app:rippleColor="@color/colorAccent" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <TextView
+                    android:id="@+id/productTitleTv"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="African white rice "
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/addToWishlistFab"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/addToWishlistFab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:elevation="0dp"
+                    android:src="@drawable/ic_wishlist_outline"
+                    app:elevation="0dp"
+                    app:fabSize="mini"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:rippleColor="@color/colorSecondary"
+                    app:tint="@color/colorAccent" />
+
+
+                <TextView
+                    android:id="@+id/productPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="$45 - $90"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/productTitleTv"
+                    app:layout_constraintTop_toBottomOf="@id/productTitleTv" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buyNowBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:drawableStart="@drawable/ic_checkout"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="@string/buy_now"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_checkout"
+                    app:iconTint="@color/colorAccent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/unitChoice" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/buyNowBtn"/>
+
+                <TextView
+                    android:id="@+id/similarProductsTv"
+                    style="@style/CaptionTextViewStyle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/home_tv_bg"
+                    android:drawablePadding="8dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="12dp"
+                    android:text="Similar Products"
+                    app:drawableStartCompat="@drawable/ic_wish_list"
+                    app:drawableTint="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/similarProductsRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/similarProductsTv"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/product_list_layout" />
+
+                <TextView
+                    android:id="@+id/alsoViewedTv"
+                    style="@style/CaptionTextViewStyle"
+                    android:layout_width="220dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/home_tv_bg"
+                    android:drawablePadding="8dp"
+                    android:elevation="2dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="center_horizontal|center_vertical"
+                    android:padding="12dp"
+                    android:text="Also Viewed"
+                    app:drawableStartCompat="@drawable/ic_wish_list"
+                    app:drawableTint="@color/colorPrimary"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/similarProductsRv" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/alsoViewedRv"
+                    android:layout_width="match_parent"
+                    android:layout_height="256dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:scrollbarSize="0dp"
+                    android:scrollbars="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/alsoViewedTv"
+                    tools:itemCount="10"
+                    tools:listitem="@layout/product_list_layout" />
+
+                <TextView
+                    android:id="@+id/oldPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="start"
+                    android:text="$35"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/productPrice"
+                    app:layout_constraintEnd_toStartOf="@id/addToWishlistFab"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toEndOf="@+id/productPrice" />
+
+                <ImageView
+                    android:id="@+id/ratingPersImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:src="@drawable/ic_person_outline"
+                    app:layout_constraintBottom_toBottomOf="@+id/productRatingBar"
+                    app:layout_constraintStart_toEndOf="@+id/productRatingBar"
+                    app:layout_constraintTop_toTopOf="@+id/productRatingBar"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/numRatingPers"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="400k"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/ratingPersImg"
+                    app:layout_constraintStart_toEndOf="@+id/ratingPersImg"
+                    app:layout_constraintTop_toTopOf="@+id/ratingPersImg" />
+
+                <ImageView
+                    android:id="@+id/ordersPersImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/ic_complete_orders"
+                    app:layout_constraintBottom_toBottomOf="@+id/numOrders"
+                    app:layout_constraintEnd_toStartOf="@+id/numOrders"
+                    app:layout_constraintTop_toTopOf="@+id/numOrders"
+                    app:tint="@color/textColor" />
+
+                <TextView
+                    android:id="@+id/numOrders"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="400"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/productPrice" />
+
+
+                <TextView
+                    android:id="@+id/shippingPriceTv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="Price: $20/KG"
+                    android:textColor="@color/textColor"
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@+id/shippingComName"
+                    app:layout_constraintStart_toStartOf="@+id/shippingComName"
+                    app:layout_constraintTop_toBottomOf="@+id/shippingComName" />
+
+                <EditText
+                    android:id="@+id/quantityEdt"
+                    android:layout_width="144dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/quantity_edt_bg"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:hint="Quantity"
+                    android:imeActionLabel="DONE"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:textColorHint="@color/textColor"
+                    app:layout_constraintEnd_toEndOf="@+id/shippingComName"
+                    app:layout_constraintStart_toStartOf="@+id/shippingComName"
+                    app:layout_constraintTop_toBottomOf="@+id/shippingPriceTv" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/unitChoice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:chipSpacing="48dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/quantityEdt"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/kiloChoice"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:checked="true"
+                        android:fontFamily="@font/overlock_headline"
+                        android:text="Kilograms"
+                        android:textAppearance="@style/ChipTextStyle"
+                        android:textColor="@color/textColor"
+                        app:checkedIcon="@drawable/ic_selection_done"
+                        app:checkedIconTint="@color/colorSecondary"
+                        app:checkedIconVisible="true"
+                        app:chipBackgroundColor="@color/chip_bg_tint"
+                        app:chipCornerRadius="16dp"
+                        app:chipIconEnabled="false"
+                        app:chipStrokeColor="@color/textColor"
+                        app:chipStrokeWidth="1dp"
+                        app:closeIconEnabled="false"
+                        app:rippleColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/tonChoice"
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:checked="false"
+                        android:fontFamily="@font/overlock_headline"
+                        android:text="Tonnes"
+                        android:textAppearance="@style/ChipTextStyle"
+                        android:textColor="@color/textColor"
+                        app:checkedIcon="@drawable/ic_selection_done"
+                        app:checkedIconTint="@color/colorSecondary"
+                        app:checkedIconVisible="true"
+                        app:chipBackgroundColor="@color/chip_bg_tint"
+                        app:chipCornerRadius="16dp"
+                        app:chipIconEnabled="false"
+                        app:chipStrokeColor="@color/textColor"
+                        app:chipStrokeWidth="1dp"
+                        app:closeIconEnabled="false"
+                        app:rippleColor="@color/colorAccent" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <TextView
+                    android:id="@+id/productOverView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:gravity="center_horizontal"
+                    android:text="TextView sghfhsgdf sngdfgdf sgfdguf dhfdsgu dnbjdgud
+                     dgsjfd sdfhjdh sfgdhgfd dfsdgfh sfdhfsdhfdherytdgfdgfu"
+                    android:textColor="@color/textColor"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/gradeChoice" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/moreDetailsBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="More Details"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:cornerRadius="24dp"
+                    app:icon="@drawable/ic_more_details"
+                    app:iconTint="@color/textColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/productOverView" />
+
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/colorSecondary"
+                    android:orientation="vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/moreDetailsBtn" />
+
+                <TextView
+                    android:id="@+id/shippingComName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:drawableTint="@color/colorAccent"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="Select Shipping Company"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp"
+                    app:drawableEndCompat="@drawable/ic_dropdown_full"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+                    app:tint="@color/colorAccent" />
+
+                <ImageButton
+                    android:id="@+id/plusOne"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="?attr/colorSecondary"
+                    android:contentDescription="@string/add_quantity"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="@+id/quantityEdt"
+                    app:layout_constraintEnd_toStartOf="@+id/quantityEdt"
+                    app:layout_constraintTop_toTopOf="@+id/quantityEdt"
+                    app:srcCompat="@drawable/ic_minus_one"
+                    app:tint="@color/colorSecondary" />
+
+                <ImageButton
+                    android:id="@+id/minusOne"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:backgroundTint="?attr/colorSecondary"
+                    android:contentDescription="@string/decreasee_item_quantity"
+                    android:tint="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="@+id/quantityEdt"
+                    app:layout_constraintStart_toEndOf="@+id/quantityEdt"
+                    app:layout_constraintTop_toTopOf="@+id/quantityEdt"
+                    app:srcCompat="@drawable/ic_plus_one"
+                    app:tint="@color/colorSecondary" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/addToCartFab"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:fontFamily="@font/overlock_headline"
+        android:src="@drawable/ic_add_cart"
+        android:text="Add to Cart"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:tint="@color/colorPrimary"
+        android:translationZ="12dp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:icon="@drawable/ic_add_cart"
+        app:iconTint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="?attr/colorSecondary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

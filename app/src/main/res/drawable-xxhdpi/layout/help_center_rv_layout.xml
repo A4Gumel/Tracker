@@ -1,0 +1,60 @@
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools"
+    android:id="@+id/dashboardCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="2dp"
+    app:rippleColor="@color/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp">
+
+        <ImageView
+            android:id="@+id/helpImg"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:contentDescription="@string/login_fb"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_facebook_logo" />
+
+        <TextView
+            android:id="@+id/helpTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="TextView"
+            android:textColor="@color/colorSecondary"
+            android:fontFamily="@font/overlock_headline"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/helpImg"
+            app:layout_constraintStart_toEndOf="@+id/helpImg"
+            app:layout_constraintTop_toTopOf="@+id/helpImg" />
+
+        <TextView
+            android:id="@+id/helpBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:gravity="center"
+            android:text="TextView fgbdhfvs vc dvs dsgfygdv dsmbjgdhyfd dbshjhdf dhfdjghd fdhbgfdhgd "
+            android:textColor="@color/textColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/helpImg" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

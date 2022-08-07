@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/buyNowSheet"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+    <TextView
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:text="Payment"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"/>
+
+    <LinearLayout
+        android:id="@+id/paymentLL"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="8dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:orientation="vertical" />
+
+    <ProgressBar
+        android:id="@+id/paymentProgress"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:visibility="invisible"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Current Billing Amount"
+        android:textColor="@color/textColor"
+        android:textSize="14sp"
+        android:layout_marginTop="4dp"/>
+
+    <TextView
+        android:id="@+id/billingAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.MaterialComponents.Headline4"
+        android:fontFamily="@font/overlock_headline"
+        android:text="USD 8999"
+        android:textColor="@color/colorSecondary"
+        android:layout_marginTop="4dp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Enter your card credentials."
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cardNumberTextInput"
+        style="@style/AccEDTStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Card Number"
+        app:boxStrokeColor="@color/textColor"
+        app:boxStrokeErrorColor="@color/design_default_color_error"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_credit_card"
+        app:startIconTint="@color/textColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cardNumEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/overlock_headline"
+            android:inputType="numberDecimal"
+            android:imeOptions="actionNext"
+            android:textCursorDrawable="@color/colorAccent"
+            android:maxLength="24"
+            android:textSize="20sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardExpiryDateTextInput"
+            style="@style/AccEDTStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:hint="Valid till (MM/YY)"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toStartOf="@+id/cardCVVTextInput"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_date_calender"
+            app:startIconTint="@color/textColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/cardExpiryEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overlock_headline"
+                android:inputType="numberDecimal"
+                android:imeOptions="actionNext"
+                android:maxLength="5"
+                android:textCursorDrawable="@color/colorAccent"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/cardCVVTextInput"
+            style="@style/AccEDTStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:gravity="end"
+            android:hint="CVV"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:errorEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cardExpiryDateTextInput"
+            app:layout_constraintTop_toTopOf="parent"
+            app:startIconDrawable="@drawable/ic_password"
+            app:startIconTint="@color/textColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overlock_headline"
+                android:inputType="numberPassword"
+                android:imeOptions="actionGo"
+                android:imeActionLabel="DONE"
+                android:textCursorDrawable="@color/colorAccent"
+                android:maxLength="3"
+                android:textSize="20sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/saveCardSwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Save Card"
+            android:textColorLink="@color/colorAccent"
+            android:textColor="@color/textColor"
+            android:shadowColor="@color/colorAccent"
+            android:fontFamily="@font/raleway_subtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardCVVTextInput" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/payBtn"
+            style="@style/AccButton"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="4dp"
+            android:backgroundTint="@color/colorAccent"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="PAY USD 8999"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintTop_toBottomOf="@id/saveCardSwitch"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/securedImg"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/secured_by_paystack"/>
+
+
+</LinearLayout>

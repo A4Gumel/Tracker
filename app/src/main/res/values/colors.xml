@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorSecondary">#3CBA54</color>
+    <color name="colorAccent">#F4C20D</color>
+    <color name="textColor">#20272B</color>
+    <color name="errorColor">#B00020</color>
+    <color name="shimmerBg">#dddddd</color>
+    <color name="dividerGray">#AAe2e2e2</color>
+    <color name="textGray">#8C000000</color>
+</resources>

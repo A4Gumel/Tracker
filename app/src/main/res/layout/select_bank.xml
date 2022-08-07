@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectBankSheet"
+    android:orientation="vertical"
+    android:layout_height="480dp">
+
+    <TextView
+        android:id="@+id/selectBankTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="@string/select_bank"
+        android:letterSpacing="0.22"
+        android:textColor="@color/colorSecondary"
+        android:textAllCaps="true"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/darkModeTitle" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/bankNameTextInput"
+        style="@style/AccEDTStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/search_hint"
+        app:boxStrokeColor="@color/textColor"
+        app:startIconDrawable="@drawable/ic_round_search"
+        app:endIconDrawable="@drawable/ic_bank"
+        app:endIconTint="@color/textColor"
+        app:endIconCheckable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:startIconTint="@color/textColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_subtitle"
+            android:inputType="textCapWords"
+            android:maxLength="24"
+            android:drawableTint="@color/textColor"
+            android:drawableEnd="@drawable/ic_bank"
+            android:maxLines="1"
+            android:textSize="14sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <LinearLayout
+        android:id="@+id/loadingLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ProgressBar
+            android:id="@+id/banksProgress"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="16dp"
+            android:padding="16dp"
+            android:layout_height="match_parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/please_wait"/>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/banksListRv"
+        android:layout_width="match_parent"
+        android:layout_margin="16dp"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/banks_list_layout"/>
+
+</LinearLayout>

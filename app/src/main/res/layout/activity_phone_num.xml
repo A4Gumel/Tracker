@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".Utils.PhoneNumActivity">
+
+    <LinearLayout
+        android:id="@+id/otpStartContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/ic_phone_otp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:letterSpacing="0.22"
+            android:text="@string/otp_verification"
+            android:textAllCaps="true"
+            android:textColor="@color/colorSecondary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:gravity="center"
+            android:text="@string/provide_your_phone_number"
+            android:textColor="@color/textColor"
+            android:textSize="18sp" />
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            app:ccpDialog_showCloseIcon="true"
+            app:ccpDialog_showPhoneCode="true"
+            app:ccpDialog_showTitle="true"
+            app:ccpDialog_textColor="@color/colorSecondary"
+            app:ccp_autoDetectCountry="true"
+            app:ccp_autoFormatNumber="true"
+            app:ccp_contentColor="@color/textColor"
+            app:ccp_defaultNameCode="NG"
+            app:ccp_rememberLastSelection="true"
+            app:ccp_showFullName="true"
+            app:ccp_showPhoneCode="true" />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phoneNumTextInput"
+            style="@style/AccEDTStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:gravity="center"
+            android:hint="@string/phone_number"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/errorColor"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginUsername"
+            app:passwordToggleTint="@color/textColor"
+            app:startIconDrawable="@drawable/ic_phone"
+            app:startIconTint="@color/textColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phoneNumEdt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center"
+                android:inputType="phone"
+                android:imeOptions="actionGo"
+                android:maxLength="12"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+            android:id="@+id/sendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/color_accent_btn_bg"
+            android:fontFamily="@font/raleway_subtitle"
+            android:onClick="sendOTP"
+            android:text="@string/send_otp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/loginPassword"
+            app:layout_constraintStart_toStartOf="@id/loginPassword"
+            app:layout_constraintTop_toBottomOf="@id/loginRememberMe"
+            app:pb_colorCompleteText="@color/colorPrimary"
+            app:pb_colorErrorText="@color/textColor"
+            app:pb_colorIndicator="@color/colorAccent"
+            app:pb_colorProgress="@color/colorAccent"
+            app:pb_cornerRadius="48dp"
+            app:pb_iconComplete="@drawable/ic_round_check_circle"
+            app:pb_iconError="@drawable/ic_round_cancel_48"
+            app:pb_isIndeterminate="true"
+            app:pb_selectorComplete="@color/colorAccent"
+            app:pb_selectorError="@color/errorColor"
+            app:pb_selectorIdle="@color/colorSecondary"
+            app:pb_textColorAfterClick="@color/colorAccent"
+            app:pb_textIdle="@string/send_otp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/otpSentContent"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="56dp"
+            android:src="@drawable/ic_otp_sent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:letterSpacing="0.22"
+            android:text="@string/otp_verification"
+            android:textAllCaps="true"
+            android:textColor="@color/colorSecondary"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/enterOtpInfo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:gravity="center"
+            android:text="@string/enter_otp"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            tools:text="Enter the 6 digit OTP sent to :  \n 048364765736 " />
+
+
+        <in.aabhasjindal.otptextview.OtpTextView
+            android:id="@+id/otpView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:textColor="@color/textColor"
+            app:bar_active_color="@color/colorAccent"
+            app:bar_enabled="true"
+            app:bar_error_color="@color/errorColor"
+            app:bar_height="2dp"
+            app:bar_inactive_color="@color/textColor"
+            app:bar_success_color="@color/colorSecondary"
+            app:box_margin="8dp"
+            app:height="48dp"
+            app:hide_otp="false"
+            app:length="6"
+            app:otp="123456"
+            app:otp_text_size="24sp"
+            app:text_typeface="bold"
+            app:width="48dp" />
+
+        <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+            android:id="@+id/verifyOtp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/color_accent_btn_bg"
+            android:fontFamily="@font/raleway_subtitle"
+            android:onClick="verifyOTP"
+            android:text="@string/verify_otp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/loginPassword"
+            app:layout_constraintStart_toStartOf="@id/loginPassword"
+            app:layout_constraintTop_toBottomOf="@id/loginRememberMe"
+            app:pb_colorCompleteText="@color/colorPrimary"
+            app:pb_colorErrorText="@color/textColor"
+            app:pb_colorIndicator="@color/colorAccent"
+            app:pb_colorProgress="@color/colorAccent"
+            app:pb_cornerRadius="48dp"
+            app:pb_iconComplete="@drawable/ic_round_check_circle"
+            app:pb_iconError="@drawable/ic_round_cancel_48"
+            app:pb_isIndeterminate="true"
+            app:pb_selectorComplete="@color/colorAccent"
+            app:pb_selectorError="@color/errorColor"
+            app:pb_selectorIdle="@color/colorSecondary"
+            app:pb_textError="@string/invalid_otp"
+            app:pb_textColorAfterClick="@color/colorAccent"
+            app:pb_textIdle="@string/verify_otp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="@string/otp_not_received"
+            android:textColor="@color/colorSecondary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/resendOtpAfter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="@string/resend_otp_after"
+            android:textColor="@color/colorSecondary"
+            android:visibility="gone"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/resendOtpBtn"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:strokeWidth="1dp"
+            android:padding="8dp"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp"
+            android:layout_marginTop="16dp"
+            app:strokeColor="@color/errorColor"
+            app:cornerRadius="24dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:textColor="@color/errorColor"
+            android:textSize="16sp"
+            android:text="@string/resend_otp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

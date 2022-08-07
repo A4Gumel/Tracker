@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/shareLinkDialog"
+    app:layout_behavior="@string/bottom_sheet_behavior"
+    android:layout_width="match_parent"
+    android:background="@drawable/share_link_bg"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/shareTitle"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:text="Share"
+        android:textStyle="bold"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/shareTitle" />
+
+    <ImageView
+        android:id="@+id/gmailShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/facebookShare"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:srcCompat="@drawable/ic_gmail" />
+
+    <ImageView
+        android:id="@+id/facebookShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gmailShare"
+        app:layout_constraintEnd_toStartOf="@+id/twitterShare"
+        app:layout_constraintStart_toEndOf="@+id/gmailShare"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:srcCompat="@drawable/ic_facebook_logo" />
+
+    <ImageView
+        android:id="@+id/twitterShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/facebookShare"
+        app:layout_constraintEnd_toStartOf="@+id/instagramShare"
+        app:layout_constraintStart_toEndOf="@+id/facebookShare"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:srcCompat="@drawable/ic_twitter_2" />
+
+    <ImageView
+        android:id="@+id/instagramShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/twitterShare"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/twitterShare"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+        app:srcCompat="@drawable/ic_instagram" />
+
+    <ImageView
+        android:id="@+id/whatsappShare"
+        android:layout_width="56dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/gmailShare"
+        app:layout_constraintStart_toStartOf="@+id/gmailShare"
+        app:layout_constraintTop_toBottomOf="@+id/gmailShare"
+        app:srcCompat="@drawable/ic_whatsapp_logo" />
+
+    <ImageView
+        android:id="@+id/messengerShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/facebookShare"
+        app:layout_constraintStart_toStartOf="@+id/facebookShare"
+        app:layout_constraintTop_toBottomOf="@+id/facebookShare"
+        app:srcCompat="@drawable/ic_facebook_messenger" />
+
+    <ImageView
+        android:id="@+id/copyToBoard"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_clipboard"
+        app:layout_constraintEnd_toEndOf="@+id/twitterShare"
+        app:layout_constraintStart_toStartOf="@+id/twitterShare"
+        app:layout_constraintTop_toBottomOf="@+id/twitterShare"
+        app:layout_constraintVertical_bias="0.0"
+        app:tint="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/moreShare"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="@+id/instagramShare"
+        app:layout_constraintStart_toStartOf="@+id/instagramShare"
+        app:layout_constraintTop_toBottomOf="@+id/instagramShare"
+        app:tint="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/shareErrorTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:text="error"
+        android:textColor="@color/design_default_color_error"
+        android:fontFamily="@font/raleway_subtitle"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/copyToBoard"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

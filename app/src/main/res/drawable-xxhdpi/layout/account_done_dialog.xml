@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp"
+    android:layout_margin="16dp"
+    android:padding="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/successContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/successAnim"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:src="@raw/account_done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:id="@+id/sucessTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/overlock_headline"
+            android:textColor="@color/colorSecondary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/successAnim"
+            app:layout_constraintStart_toStartOf="@+id/successAnim"
+            app:layout_constraintTop_toBottomOf="@id/successAnim"
+            tools:text="Account Created Successfully" />
+
+        <TextView
+            android:id="@+id/accountDoneBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/sucessTitle"
+            app:layout_constraintStart_toStartOf="@+id/sucessTitle"
+            app:layout_constraintTop_toBottomOf="@+id/sucessTitle"
+            tools:text="Click on the link sent to a4auwal@gmail.com to verify your email. Would you like to complete your profile details ?" />
+
+        <TextView
+            android:id="@+id/gotoHome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/overlock_headline"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/yesLogin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/accountDoneBody"
+            tools:text="No, Take me Home." />
+
+        <TextView
+            android:id="@+id/yesLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/overlock_headline"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/gotoHome"
+            app:layout_constraintTop_toBottomOf="@+id/accountDoneBody"
+            tools:text="Yes, Continue." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>
+

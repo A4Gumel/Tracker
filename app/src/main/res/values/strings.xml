@@ -1,0 +1,590 @@
+<resources>
+    <string name="app_name">Tracker</string>
+    <string name="PSTK_PUBLIC_KEY" translatable="false">YOUR_PAYSTACK_PUBLIC_KEY</string>
+
+    <!--    content description string files-->
+    <string name="category_image">category image</string>
+    <string name="enable_dark_mode">toggle night and dark mode</string>
+    <string name="shopping_cart">Shopping cart</string>
+    <string name="categories">Categories</string>
+    <string name="developer_logo">Developer Logo</string>
+    <string name="product_image">Product Image</string>
+
+    <!--    Dashboard/Account Fragment String files-->
+    <string name="dashboard">Dashboard</string>
+
+    <!--    Notification/Messages fragment String files-->
+    <string name="notifications">Notifications</string>
+
+    <!--    Nav Drawer String Files-->
+    <string name="nav_menu_app">App</string>
+    <string name="nav_social_media">Social Media</string>
+    <string name="nav_facebook" translatable="false">Facebook</string>
+    <string name="nav_more">More</string>
+    <string name="nav_feedback">Feedback</string>
+    <string name="nav_about_us">About Us</string>
+    <string name="nav_developer">About the developer</string>
+    <string name="nav_coupons">Coupons</string>
+    <string name="nav_rate_us">Rate Us</string>
+    <string name="nav_terms">Terms and Conditions</string>
+    <string name="nav_return">Return and refund policy</string>
+    <string name="nav_policy">Privacy policy</string>
+    <string name="nav_log_out"><b style="color:red;">Log out</b></string>
+    <string name="nav_twitter" translatable="false">Twitter</string>
+    <string name="nav_instagram" translatable="false">Instagram</string>
+    <string name="openNavDrawer" translatable="false">Navigation Drawer Open</string>
+    <string name="closeNavDrawer" translatable="false">Navigation Drawer Close</string>
+    <string name="nav_share_app">Share App</string>
+    <string name="nav_full_name">Full name</string>
+    <string name="nav_email" translatable="false">a4auwal@gmail.com</string>
+    <string name="faqs">FAQS</string>
+    <string name="dark_mode">Dark mode</string>
+
+    <!--    account activity string files-->
+    <string name="acc_title">Account</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password ?</string>
+    <string name="or_login_using">or login using</string>
+    <string name="no_account">Don\'t have an Account ?</string>
+    <string name="register_here">Register Here</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="username">Username</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="register">Register</string>
+    <string name="have_account">Already have an Account ?</string>
+    <string name="login_here">Login Here</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="log_in_title">Login In To Your Account</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="accept_terms">I Agree to Terms and Conditions</string>
+    <string name="agreement">I Agree To Terms of Use</string>
+    <string name="empty_email_field">Email is required</string>
+    <string name="invalid_email_error">Please enter a valid email address</string>
+    <string name="empty_username_field">Username is required</string>
+    <string name="username_too_small">Username should be greater than 4 digits</string>
+    <string name="username_too_long">Username should be less than 15 digits</string>
+    <string name="password_dont_match_error">Password don\'t match check your inputs.</string>
+    <string name="agreement_error">You must agree to Terms of service.</string>
+    <string name="username_as_password_error">Username can\'t be your password.</string>
+    <string name="email_as_password_error">Email can\'t be your password.</string>
+    <string name="password_too_short_error">Password too short should be greater than 4 digits</string>
+    <string name="password_not_secure_error">Password is not secure.</string>
+    <string name="login_email_empty_error">please enter password</string>
+    <string name="email_or_username">Email / Username</string>
+    <string name="email_or_username_empty_error">email or username is required</string>
+    <string name="email_or_username_too_short_error">email or password is too short</string>
+    <string name="are_you_a_transporter">Are you a Transporter ?</string>
+    <string name="login">Login</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="battery_saver">Battery saver</string>
+    <string name="auto_time">Auto time</string>
+    <string name="dark_mode_follow_system">Follow system</string>
+    <string name="transporter_login">Transporter Login</string>
+    <string name="login_as_seller">Login as Seller</string>
+    <string name="login_as_transporter">Login as Transporter</string>
+    <string name="hi_there_welcome">Hi There\nWelcome</string>
+    <string name="seller_login">Seller login</string>
+    <string name="contain_special_char">Username contain invalid characters.</string>
+    <string name="white_space_error">Username can\'t have whitespace.</string>
+
+    <string name="password_numeric_error">Password is entirely numeric.</string>
+    <string name="confirm_password_error">You need to confirm your password.</string>
+    <string name="empty_password">Password is required.</string>
+    <string name="read_terms">Read Terms of Use here</string>
+    <string name="agree_snackbar">I Agree</string>
+    <string name="choose_username">Choose username</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="login_error">Unable to login with provided credentials. Kindly check your inputs.
+    </string>
+    <string name="login_success">Login successful! OK</string>
+
+    <!--    str files for account activity dialog-->
+    <string name="log_in_as">Log in as</string>
+    <string name="yes">Yes</string>
+    <string name="no">NO</string>
+    <string name="account_created">Account Created Successfully.</string>
+    <string name="click_on_the_link_sent">Click on the link sent to</string>
+    <string name="to_verify_email">to verify your email. Would you like to complete your profile
+        details ?</string>
+    <string name="yes_continue">Yes, Continue.</string>
+    <string name="no_take_me_home">No, Take me Home.</string>
+    <string name="forgot_password_body">No worries ! we\'ve got you covered, enter your sign up Email
+        and we will send link to reset your Password.</string>
+    <string name="send_reset_link">Send Reset Link</string>
+    <string name="reset_error">An error has occurred try again or check your inputs.
+    Having difficulty resetting you can contact the customer service team via the help center.</string>
+    <string name="forgot_password_success_body">An link has been sent to your email address, click on the link to reset your password</string>
+    <string name="forgot_pass_success_title">Reset password success !</string>
+    <string name="forgot_pass_title_error">Error !</string>
+
+    <!--    content description for account activity-->
+    <string name="forgot_password_img">forgot password</string>
+
+
+    <!--     errors from server for login-->
+    <string name="email_inused_error">A user with that email already exists.</string>
+    <string name="username_inused_error">A user with that username already exists.</string>
+    <string name="server_conn_server">Unable to establish communication to our servers.
+    Check your internet connection &amp; try again later.</string>
+    <string name="internet_error_snackbar">OK</string>
+
+    <!--    login str files-->
+    <string name="empty_username_email">Please enter your email or username</string>
+
+    <!--    supported languages-->
+    <string name="english">English</string>
+    <string name="hausa">Hausa</string>
+    <string name="arabic">Arabic</string>
+
+    <!--    Dashboard Fragment String files-->
+    <string name="user_anonymous">Guest User</string>
+
+    <!--    content desc for dashboard-->
+    <string name="verified_email">verified email</string>
+    <string name="dev_fb">visit developer page on Facebook</string>
+
+    <!--    services in dashboard str files-->
+    <string name="dash_orders">Orders</string>
+    <string name="dash_tracking">Tracking</string>
+    <string name="dash_settings">Settings</string>
+    <string name="dash_profile">Profile</string>
+    <string name="dash_help_center">Help Center</string>
+    <string name="dash_terms">Terms of Service</string>
+    <string name="dash_about">About Us</string>
+
+
+    <!--    activity profile str files-->
+    <string name="basic_info">Basic Info</string>
+    <string name="full_name">Full Name</string>
+    <string name="country">Country</string>
+    <string name="birth_date">Birth Date</string>
+    <string name="currency">Currency</string>
+    <string name="gender">Gender</string>
+    <string name="change_password">Change Password</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="address">Address</string>
+    <string name="profile_title">Profile</string>
+
+    <!--    content desc for profile activity-->
+    <string name="viewed_product_img">Viewed product image</string>
+
+    <!--    activity profile change password dialog str files-->
+    <string name="change_pass_body">Enter your current password to be able to change your password.
+    </string>
+    <string name="current_password">Current Password</string>
+    <string name="new_password">New Password</string>
+    <string name="confirm_new_password">Confirm New Password</string>
+    <string name="activities">Activities</string>
+
+    <!--    address rv layout str files-->
+    <string name="delete_address">Delete</string>
+    <string name="edit_address">Edit</string>
+    <string name="address_default">Default</string>
+    <string name="set_default">Set as default</string>
+
+    <!--    user activities rv str files-->
+    <string name="more">More</string>
+    <string name="clear_all">Clear All</string>
+
+    <!--    edit profile activity str files-->
+    <string name="edit_profile_title">Edit Profile</string>
+    <string name="first_name">First name</string>
+    <string name="last_name">Last name</string>
+    <string name="select_country_code">Select country code</string>
+    <string name="phone_number">Phone number</string>
+    <string name="gender_select">Select your gender :</string>
+    <string name="male">Male</string>
+    <string name="select_currency">Select currency:</string>
+    <string name="female">Female</string>
+    <string name="date_of_birth">Date of Birth :</string>
+    <string name="is_organisation">Are you an organisation ?</string>
+    <string name="upload_proof_need">You need to upload proof.</string>
+    <string name="update">Update</string>
+    <string name="upload_certificate">click here to upload your certificate</string>
+
+    <!--    birthday alert dailog str files-->
+    <string name="dob_dialog_title">Enter your Date of Birth.</string>
+    <string name="dob_day">Day</string>
+    <string name="dob_month">Month</string>
+    <string name="dob_year">Year</string>
+    <string name="plc_day">06</string>
+    <string name="plc_month">May</string>
+    <string name="plc_year">2000</string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+    <string name="invalid_date">please enter a valid date.</string>
+    <string name="help_center_title">Help Center</string>
+    <string name="account_created_successfully">Congratulations! your account has been successfully created.</string>
+
+    <!-- feedback sheet str -->
+    <string name="feedback">Feedback</string>
+    <string name="quite_bad">Quite bad☹☹😡</string>
+    <string name="not_good">Not Good🙁🙁</string>
+    <string name="quite_ok">Quite Alright😐😑</string>
+    <string name="very_good">Very good😊😊</string>
+    <string name="excellent">Excellent 👍👍 !</string>
+    <string name="msg_null_error">Please type something…</string>
+    <string name="star_null_error">Please select some stars.</string>
+    <string name="type_ur_feedback">Type your feedback……</string>
+    <string name="feedback_info">Your feedback matters.Do let us know your thoughts by selecting some starts below.</string>
+    <string name="submit_feedback">Submit</string>
+    <string name="cancel_feedback">Cancel</string>
+
+    <!-- str files for edit profile activity -->
+    <string name="select_profile_image">Select Profile Image</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_dob">Select date of birth:</string>
+    <string name="middle_name">Middle name</string>
+    <string name="first_name_error">first name is required.</string>
+    <string name="last_name_error">last name is required.</string>
+    <string name="gender_error">please select your gender.</string>
+
+
+    <string-array name="product_search_auto_complete">
+        <item>Rice</item>
+        <item>Beans</item>
+        <item>Wheat</item>
+        <item>Sugar Cane</item>
+        <item>Goat</item>
+        <item>Ram</item>
+        <item>Hen</item>
+        <item>Sheep</item>
+        <item>Cow</item>
+    </string-array>
+
+    <!--
+   TODO: Before you run your application, you need a Google Maps API key.
+
+   To get one, follow this link, follow the directions and press "Create" at the end:
+
+   https://console.developers.google.com/flows/enableapi?apiid=m
+
+   You can also add your credentials to an existing key, using these values:
+
+   Package name:
+   YOUR PACKAGE NAME
+
+   SHA-1 certificate fingerprint:
+   SHA-1 FINGER PRINT
+
+   Alternatively, follow the directions here:
+   https://developers.google.com/maps/documentation/android/start#get-key
+
+   Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+   string in this file.
+   -->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">GOOGLE_MAPS_API_KEY</string>
+    <string name="on_dark_mode">On</string>
+    <string name="off_dark_mode">Off</string>
+    <string name="_dark_mode_follow_system">Follow system</string>
+    <string name="via_social_media_channels">Or via social media channels:</string>
+    <string name="e_mail">E-mail</string>
+    <string name="voice_chat">Voice Chat</string>
+    <string name="live_chat">Live Chat</string>
+    <string name="contact_support">You can contact our Customer support via the following channels:</string>
+
+    <string name="follow_us">Follow us</string>
+    <string name="social_media">Social media</string>
+    <string name="most_reviewed">Most Reviewed</string>
+    <string name="most_viewed">Most Viewed</string>
+    <string name="featured_items">Featured Items</string>
+    <string name="discounted_items">Discounted Items</string>
+    <string name="num_orders">Number of orders</string>
+    <string name="add_to_cart_icon">add to cart icon</string>
+    <string name="view_more">View More</string>
+    <string name="settings">Settings</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settings_general">General</string>
+    <string name="receive_push_notifs">Receive Push Notifications</string>
+    <string name="support_local_currency">Support Local Currency</string>
+    <string name="save_activity_summary">Viewed of products</string>
+    <string name="show_activities">Show viewed products</string>
+    <string name="open_source_license">Open Source Licences</string>
+    <string name="report_bug">Report a bug</string>
+    <string name="version">Version</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="summary">Summary</string>
+    <string name="shopping_cart_title" formatted="true">Shopping Cart</string>
+    <string name="terms">Terms and Conditions</string>
+    <string name="custom_license_title">Open source licences</string>
+    <string name="yes_log_out">Yes, Log Out</string>
+    <string name="confirm_log_out">Are sure you want to log out ?</string>
+    <string name="logout_success">Successfully logged out.</string>
+    <string name="logout_failure">Logout failed, Please try again later.</string>
+    <string name="no_internet">No Internet connection, please try again later.</string>
+    <string name="activity_summary">Show list of viewed products in profile</string>
+    <string name="app">app</string>
+    <string name="view_activities_info">Goto profile to view your activities</string>
+    <string name="currency_support_title">Notice</string>
+    <string name="current_support_message">Products are shown with local selected currency in EDIT PROFILE, but you pay with USD.</string>
+    <string name="select_lang">Select Language</string>
+    <string name="support_local_currency_summary">Show price in Local Currency</string>
+    <string name="unpaid_orders">Unpaid</string>
+    <string name="to_be_shippied_orders">To Be Shipped</string>
+    <string name="completed_orders">Completed</string>
+    <string name="pending_reviews_orders">Pending Reviews</string>
+    <string name="disputed_orders">Disputed</string>
+    <string name="shipped">Shipped</string>
+    <string name="arrived_orders">Arrived</string>
+    <string name="received_orders">Received</string>
+    <string name="click">Click</string>
+    <string name="click_to_login_info">at the bottom of the screen to create an account or login.</string>
+    <string name="email_too_long_err">Email too long</string>
+    <string name="verify_email_info">To access all the features of this app you need to verify your email by click on the link sent to .</string>
+    <string name="continue_shopping">Continue shopping</string>
+    <string name="update_profile">Update profile</string>
+    <string name="coming_soon">Coming soon in the release version</string>
+    <string name="login_success_redirecting">Login successful, redirecting to home…</string>
+    <string name="otp_expires_after">OTP Expires after :</string>
+    <string name="login_attempt_error">Retry after :</string>
+    <string name="by_continuing_you_agree_to_terms">By continuing you agree to <a href="">Privacy Policy</a>,  <a href="">Terms and Conditions</a> of using this App.</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="google">Google</string>
+    <string name="login_with_social_media">Login with social media</string>
+    <string name="skip">Skip</string>
+    <string name="select_your_language">Select your language :</string>
+    <string name="select_your_country">Select your country :</string>
+    <string name="navigate_to_next">Navigate to next</string>
+    <string name="navigate_to_previous">Navigate to previous</string>
+    <string name="str_continue">Continue</string>
+
+    <!-- Launch anim string files -->
+    <string name="fast">Fast</string>
+    <string name="good_quality">Good Quality</string>
+    <string name="world_wide">World wide</string>
+    <string name="secured">Secured</string>
+    <string name="fast_shipping">Fast Shipping</string>
+    <string name="fast_msg">We all process all orders in the shortest possible time.</string>
+    <string name="good_quality_msg">We have variety of products with different qualities to choose from.</string>
+    <string name="world_wide_msg">We deliver to almost all the countries.</string>
+    <string name="secured_msg">Rest assured all your information is secured with optimum security.</string>
+    <string name="fast_shipping_msg">Our shippers provide you with the best experience to track and receive goods.</string>
+    <string name="logo">Logo</string>
+    <string name="banner_image">Banner Imag</string>
+    <string name="feedback_submitted">Feedback submitted. Thank you !</string>
+    <string name="download_link">you can download the app via this <a herf="">Link</a> </string>
+    <string name="share_download_link">Share download link</string>
+    <string name="download_link_title">App Download</string>
+    <string name="contact_us">Contact us via:</string>
+    <string name="make_request_title">Make a request</string>
+    <string name="make_request_info">We are sorry the current product is not available. But don\'t worry we can send you a notification when the product is availabe.</string>
+    <string name="pay_now">Pay Now</string>
+    <string name="add_address">Add Address</string>
+    <string name="contact_name">Contact Name</string>
+    <string name="street_address">Street Address</string>
+    <string name="additional_info">Additional Info</string>
+    <string name="city">City or town</string>
+    <string name="state">State / Governerate / Region</string>
+    <string name="sort_and_filter">Sort and Filter</string>
+    <string name="delete_all">delete all</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="kg">KG</string>
+    <string name="details">Details</string>
+    <string name="ratings">Ratings</string>
+    <string name="nav_linkedin">LinkedIn</string>
+    <string name="more_details">More Details</string>
+    <string name="select_shipping_company">Select Shipping Company</string>
+    <string name="exit">exit</string>
+    <string name="share_product">share product</string>
+    <string name="play_video">Play video</string>
+    <string name="click_for_reviews">Click for Reviews</string>
+    <string name="shipping_price">"Price: "</string>
+    <string name="quantity">Quantity</string>
+    <string name="kilograms">Kilograms</string>
+    <string name="tonnes">Tonnes</string>
+    <string name="product_404">Product does not exist</string>
+    <string name="no_reviews_yet">No Reviews Yet</string>
+    <string name="cannot_reduce_quantity">Cannot Reduce quantity</string>
+    <string name="zip_code">Zip code e.g 700104</string>
+    <string name="error_occured">An error has occurred. Try again later.</string>
+    <string name="select_age_range">Select age range:</string>
+    <string name="age_range_1">16 and below</string>
+    <string name="age_range_2">16 - 26</string>
+    <string name="age_range_3">26 - 36</string>
+    <string name="age_range_4">36 - 46</string>
+    <string name="age_range_5">46 - 56</string>
+    <string name="age_range_6">56 and above</string>
+    <string name="no_image_selected">No image selected</string>
+    <string name="profile_updated">Profile update is successful.</string>
+    <string name="end_in">End In:</string>
+    <string name="new_user_only">New users only.</string>
+    <string name="all_users">All users.</string>
+    <string name="some_group_only">Available to some special user only.</string>
+    <string name="refreshed">Refreshed.</string>
+    <string name="no_products_found_search">OOPS! \n No product found try again with another keyword or clear filters.</string>
+    <string name="recommended">Recommended</string>
+    <string name="select_destination_country">Select destination country :</string>
+    <string name="quantity_err">Please enter quantity.</string>
+    <string name="select_grade_err">Please your preffered grade.</string>
+    <string name="invalid_quantity_err">Please enter a valid Number.</string>
+    <string name="add_to_cart_success">Product Added to cart.</string>
+    <string name="add_to_cart_updated">Product already exist it\'s quantity has been updated</string>
+    <string name="wishlist_success">Product successfully Added to your wish list</string>
+    <string name="wishlist_updated">Product already exist in your wish list</string>
+    <string name="you_need_login_err">You need to login or create account.</string>
+    <string name="cannot_ship_to_destination">Product cannot be shipped to selected destination.</string>
+    <string name="no_shipping_com">No shipping company for selected destination.</string>
+    <string name="label_card_number">XXXX XXXX XXXX XXXX</string>
+    <string name="payment_title">Payment</string>
+    <string name="billing_amount">Billing Amount</string>
+    <string name="enter_your_card_credentials">Enter your card credentials.</string>
+    <string name="validity_mm_yy">Validity(MM/YY)</string>
+    <string name="cvv">CVV</string>
+    <string name="save_card">Save Card</string>
+    <string name="invalid_card_num">Invalid card number, check your inputs.</string>
+    <string name="invalid_card_cvv">Invalid CVV, please check the back of your card to confirm.</string>
+    <string name="invalid_card">Invalid card ! please check your inputs.</string>
+
+    <string name="price_per_whole">$ %d / whole</string>
+    <string name="price_per_kg">$ %d / KG</string>
+    <string name="cart_grade">Grade %s </string>
+    <string name="dollar_price">$ %s </string>
+    <string name="dollar_price_2"> - $ %s </string>
+    <string name="quantity_updated">Quantity updated</string>
+    <string name="quantity_decreased">Quantity decreased.</string>
+    <string name="empty_cart">Your cart is empty.</string>
+    <string name="empty_cart_info">You cart is currently empty, Explore or search to add product to cart.</string>
+    <string name="address_chose">Address is chosed.</string>
+    <string name="no_address_err">You currently do not have shipping address.</string>
+    <string name="shipping_com_price_per_kg">Shipping: $%d /KG</string>
+    <string name="shipping_via">VIA: %s</string>
+    <string name="shipping_estimated_dd">Estimated Delivery Date : %i days</string>
+    <string name="shipping_water">Water</string>
+    <string name="shipping_land">Land</string>
+    <string name="shipping_air">Air</string>
+    <string name="restricted_conutry">Product acnnot be shipped to restricted country.</string>
+    <string name="invalid_inputs">Invalid inputs. please check and retry.</string>
+    <string name="featured">Featured</string>
+    <string name="search_results_summmary">%i Result (s)</string>
+    <string name="product_discount">%s %</string>
+    <string name="no_search_text_err">Please enter search text.</string>
+    <string name="high_to_low">High to low</string>
+    <string name="price">Price</string>
+    <string name="weight">Weighth</string>
+    <string name="apply">Apply</string>
+    <string name="low_to_high">low to high</string>
+    <string name="min_order">Minimum order</string>
+    <string name="just_updated">Just Updated</string>
+    <string name="change_password_success">Password change successfull.</string>
+    <string name="activities_deleted">All activities are deleted.</string>
+    <string name="no_orders">You currentlt do not have an orders here.</string>
+    <string name="payed">Payed</string>
+    <string name="add_review">add review</string>
+    <string name="submitted">Submitted</string>
+    <string name="confirm_received">Confirm received</string>
+    <string name="open_dispute">Open dispute</string>
+    <string name="re_order">Re-order</string>
+    <string name="contact_name_err">Contact name is required.</string>
+    <string name="phone_number_err">Phone number is required.</string>
+    <string name="street_address_err">Street address is required.</string>
+    <string name="city_err">City or town is required.</string>
+    <string name="state_err">State is required.</string>
+    <string name="no_latlng_found">Cannot locate your address, Try again later.</string>
+    <string name="address_added">Address created successfully.</string>
+    <string name="not_driver_alert">You are either <em>FIRED</em> or <em>DISMISSED</em>, if that not the case contact <b>office nearest to you</b> to be registered or verified.</string>
+    <string name="alert">Alert !</string>
+    <string name="notice">Notice !</string>
+    <string name="enter_phone_number">Enter phone number.</string>
+    <string name="provide_your_phone_number">Please select your country code and enter phone number :</string>
+    <string name="send_otp">Send OTP</string>
+    <string name="resend_otp_after">Resend OTP after :</string>
+    <string name="invalid_request">Invalid request.</string>
+    <string name="sms_qty_exceeded">Too many OTP\'s sent.</string>
+    <string name="provide_otp">Please OTP sent to : \n <b> %s</b></string>
+    <string name="your_products">Your Products</string>
+    <string name="accept">Accept</string>
+    <string name="reject">Reject</string>
+    <string name="plc_deadline">Deadline: %s Day (s)</string>
+    <string name="product_request">Product Request</string>
+    <string name="product_requests">Product Requests</string>
+    <string name="plc_amount">Amount: %s KG</string>
+    <string name="request_expire_in">Request expire in :</string>
+    <string name="destination">Destination: <b>%s</b></string>
+    <string name="view_details">View Details</string>
+    <string name="driving_request">Driving Request</string>
+    <string name="order_amount">Order Amount :</string>
+    <string name="distance">Distance</string>
+    <string name="time">Time</string>
+    <string name="ngn">NGN</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="ewallet">eWallet</string>
+    <string name="transactions">Transactions</string>
+    <string name="withdraw">Withdraw</string>
+    <string name="home">Home</string>
+    <string name="request">Requests</string>
+    <string name="account">Account</string>
+    <string name="title_activity_help_center">HelpCenterActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="active">Active</string>
+    <string name="call">Call</string>
+    <string name="request_help">Request for help</string>
+    <string name="seller_no_product_err">You do not have any products yet.</string>
+    <string name="select_bank">Select  a Bank</string>
+    <string name="account_number">Account number</string>
+    <string name="amount">Amount</string>
+    <string name="amount_to_withdraw">enter amount to withdraw.</string>
+    <string name="confirm_password_help">enter your account password to proceed</string>
+    <string name="bank_account_info">Bank Info</string>
+    <string name="name">Name:</string>
+    <string name="acc_num">Acc No. :</string>
+    <string name="bank_name">Bank Name :</string>
+    <string name="str_confirm">Confirm</string>
+    <string name="acc_num_required_err">Account number is required.</string>
+    <string name="acc_num_too_short">Account number is too short.</string>
+    <string name="amount_required">Amount is required.</string>
+    <string name="transfer_reason">Driver withdrawal from app.</string>
+    <string name="transfer_processing">Transfer is processing do not initiate a new one.</string>
+    <string name="current_position">Your location.</string>
+    <string name="otp_verification">OTP Verification</string>
+    <string name="enter_otp">Enter the 6 digit OTP sent to : \n <b> %s</b> </string>
+    <string name="verify_otp">Verify OTP</string>
+    <string name="otp_not_received">Did\'nt receive OTP.</string>
+    <string name="resend_otp">Resend OTP.</string>
+    <string name="invalid_otp">Invalid OTP</string>
+    <string name="online_success">You are now online</string>
+    <string name="retry">Retry</string>
+    <string name="my_location">My Location</string>
+    <string name="permission_is_required">Permission is required.</string>
+    <string name="you_ar_online">You\'re online.</string>
+    <string name="failed_update_location">An error occured. Try again or you may nor received orders.</string>
+    <string name="age_range">Age range</string>
+    <string name="cannot_get_locality">Cannot get locality, cannot fetch closest warehouses.</string>
+    <string name="no_warehouse_in_locality">No warehouses in this locality.</string>
+    <string name="pls_lesser_amount">Amount is greater than available balance.</string>
+    <string name="location_not_found">Location is not found.</string>
+    <string name="confirm_transfer">Confirm</string>
+    <string name="no_request_txt">No Request at this time please checkout later !</string>
+    <string name="rqst_accepted">Accepted.</string>
+    <string name="remove_loc_confirm">Are you sure you want to remove location update ? you will not be able to rceive any request.</string>
+    <string name="driver_offline_success">You\'re now offline not eligible to receive orders.</string>
+    <string name="plc_weight">Weight : %s</string>
+    <string name="plc_quantity">Quantity: %s</string>
+    <string name="grade_a">Grade A</string>
+    <string name="grade_b">Grade B</string>
+    <string name="grade_c">Grade C</string>
+
+</resources>

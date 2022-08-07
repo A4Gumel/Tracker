@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="24dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:letterSpacing="0.22"
+            android:text="@string/notice"
+            android:textAllCaps="false"
+            android:textColor="@color/errorColor"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@color/errorColor"
+            android:orientation="vertical" />
+
+        <TextView
+            android:id="@+id/alertBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:letterSpacing="0.11"
+            android:lineSpacingMultiplier="1.3"
+            android:text="@string/not_driver_alert"
+            android:textColor="@color/textColor" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dismissAlertBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:strokeColor="@color/errorColor"
+            app:strokeWidth="1dp"
+            app:cornerRadius="16dp"
+            android:layout_marginEnd="56dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/errorColor"
+            android:textStyle="bold"
+            android:text="@string/internet_error_snackbar"/>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/buyNowSheet"
+    android:layout_height="wrap_content"
+    app:behavior_hideable="true"
+    app:layout_behavior="@string/bottom_sheet_behavior">
+
+
+    <ImageView
+        android:id="@+id/closeShippingSheet"
+        android:layout_width="48dp"
+        android:visibility="invisible"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_cancel"
+        app:tint="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/buyNowTitle"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:text="Summary"
+        android:textColor="@color/textColor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/buyNowProductImg"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/profile_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowTitle"
+        app:riv_border_color="@color/colorAccent"
+        app:riv_border_width="1dp"
+        app:riv_corner_radius="16dp" />
+
+    <TextView
+        android:id="@+id/buyNowProductName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:text="African white rice "
+        android:textColor="@color/colorSecondary"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/buyNowProductImg"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowTitle" />
+
+    <TextView
+        android:id="@+id/buyNowGrade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical|center_horizontal"
+        android:fontFamily="@font/overlock_headline"
+        android:text="Grade A"
+        android:backgroundTint="@color/colorAccent"
+        android:textSize="20sp"
+        android:padding="4dp"
+        android:elevation="4dp"
+        android:paddingEnd="8dp"
+        android:paddingStart="8dp"
+        android:textColor="@color/textColor"
+        app:layout_constraintStart_toStartOf="@+id/buyNowProductName"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowProductName"
+        app:rippleColor="@color/colorAccent" />
+
+    <TextView
+        android:id="@+id/buyNowProductPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/overlock_headline"
+        android:text="Price: $60 / kg"
+        android:textColor="@color/textColor"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@+id/buyNowGrade"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowGrade" />
+
+    <LinearLayout
+        android:id="@+id/buyNowll1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowProductPrice" />
+
+    <TextView
+        android:id="@+id/buyNowQuantityTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Quantity : 90 KGS"
+        android:textColor="@color/textColor"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowll1" />
+
+    <TextView
+        android:id="@+id/buyNowAmountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Subtotal : $ 100"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowQuantityTv" />
+
+    <TextView
+        android:id="@+id/approximateAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="appr: NGN 8909898"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/buyNowAmountTv"
+        app:layout_constraintStart_toStartOf="@+id/buyNowAmountTv"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowAmountTv" />
+
+    <TextView
+        android:id="@+id/buyNowShippingAmountTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Shipping : $ 50"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/approximateAmount" />
+
+    <TextView
+        android:id="@+id/approximateAmountShipping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="appr: NGN 8909898"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/approDD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowShippingAmountTv" />
+
+    <TextView
+        android:id="@+id/approDD"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:text="appr: 52 days to arrive"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/approximateAmountShipping"
+        app:layout_constraintTop_toBottomOf="@id/buyNowShippingAmountTv" />
+
+
+    <TextView
+        android:id="@+id/couponTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Discount : $ 50"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/approximateAmountShipping" />
+
+    <TextView
+        android:id="@+id/approximateCoupon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="appr: NGN 8909898"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/couponTotal"
+        app:layout_constraintStart_toStartOf="@+id/couponTotal"
+        app:layout_constraintTop_toBottomOf="@+id/couponTotal" />
+
+    <TextView
+        android:id="@+id/buyNowTotalTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:text="Total Amount : $ 100"
+        android:textColor="@color/textColor"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/approximateCoupon" />
+
+    <TextView
+        android:id="@+id/approximateTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="appr: NGN 8909898"
+        android:textColor="@color/textColor"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@+id/buyNowTotalTv"
+        app:layout_constraintStart_toStartOf="@+id/buyNowTotalTv"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowTotalTv" />
+
+
+    <LinearLayout
+        android:id="@+id/buyNowll2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="1dp"
+        android:backgroundTint="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/approximateTotal" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buyNowConfirm"
+        style="@style/AccButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        android:hint="Continue"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buyNowll2"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

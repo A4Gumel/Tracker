@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sellerInfoCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:rippleColor="@color/colorAccent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.6"
+                android:fontFamily="@font/raleway_subtitle"
+                android:padding="8dp"
+                android:text="@string/driving_request"
+                android:textColor="@color/colorSecondary"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_time_lapse"
+                    app:tint="@color/errorColor"
+                    tools:ignore="ContentDescription" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="@string/request_expire_in"
+                    android:textColor="@color/errorColor"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/requestTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    tools:text="00:59"
+                    android:textColor="@color/errorColor"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/requestProductImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_border_color="@color/colorPrimary"
+                app:riv_border_width="4dp"
+                app:riv_corner_radius="16dp" />
+
+            <TextView
+                android:id="@+id/requestProductName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                tools:text="Product Name"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                android:maxLines="2"
+                android:ellipsize="end"
+                app:layout_constraintEnd_toStartOf="@+id/requestProductImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/requestAmount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/plc_amount"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:maxLines="1"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/requestProductImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/requestProductName"
+                app:layout_constraintTop_toBottomOf="@+id/requestProductName" />
+
+            <TextView
+                android:id="@+id/requestDeadline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="@string/weight"
+                app:layout_constraintEnd_toStartOf="@+id/requestProductImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/requestAmount"
+                app:layout_constraintTop_toBottomOf="@+id/requestAmount" />
+
+            <TextView
+                android:id="@+id/requestDestination"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:paddingBottom="8dp"
+                android:text="@string/destination"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:maxLines="5"
+                app:layout_constraintEnd_toStartOf="@+id/requestProductImage"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/requestDeadline"
+                app:layout_constraintTop_toBottomOf="@+id/requestDeadline" />
+
+            <androidx.constraintlayout.widget.Barrier
+                android:id="@+id/requestBarrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:barrierDirection="bottom"
+                app:constraint_referenced_ids="requestDestination,requestProductImage" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/requestDetailsBtn"
+                style="@style/Widget.MaterialComponents.Button"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/details"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/colorAccent"
+                android:textColor="@color/colorAccent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/acceptRequestBtn"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/requestBarrier" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/acceptRequestBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/accept"
+                android:textColor="@color/colorSecondary"
+                android:textStyle="bold"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/requestDetailsBtn"
+                app:layout_constraintTop_toBottomOf="@id/requestBarrier"
+                app:strokeColor="@color/colorSecondary" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

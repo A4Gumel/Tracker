@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/driverHomeMap"
+        android:title="@string/my_location"
+        android:icon="@drawable/ic_my_location_24"
+        app:cnb_backgroundColor="@color/colorSecondary"
+        app:cnb_iconColor="@color/colorAccent"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/textColor">
+
+    </item>
+
+    <item
+        android:id="@+id/driverHome"
+        android:title="@string/home"
+        android:icon="@drawable/ic_home"
+        app:cnb_backgroundColor="@color/colorSecondary"
+        app:cnb_iconColor="@color/colorAccent"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/textColor">
+
+    </item>
+
+    <item
+        android:id="@+id/driverWallet"
+        android:title="@string/ewallet"
+        android:icon="@drawable/ic_wallet"
+        app:cnb_backgroundColor="@color/colorSecondary"
+        app:cnb_iconColor="@color/colorAccent"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/textColor">
+    </item>
+
+    <item
+        android:id="@+id/driverAccount"
+        android:title="@string/account"
+        android:icon="@drawable/ic_account"
+        app:cnb_backgroundColor="@color/colorSecondary"
+        app:cnb_iconColor="@color/colorAccent"
+        app:cnb_iconTintMode="src_in"
+        app:cnb_textColor="@color/textColor">
+    </item>
+
+</menu>

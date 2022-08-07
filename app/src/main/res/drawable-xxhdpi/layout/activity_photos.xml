@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/productPhotoView"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        app:fabSize="mini"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_save"
+        app:tint="@color/colorPrimary" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:clickable="true"
+        android:focusable="true"
+        app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorPrimary"
+        app:srcCompat="@drawable/ic_arrow_back"
+        app:tint="@color/colorPrimary" />
+
+    <com.smarteist.autoimageslider.SliderView
+        android:id="@+id/detailImageSlider"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:sliderAutoCycleDirection="back_and_forth"
+        app:sliderAutoCycleEnabled="false"
+        app:sliderIndicatorGravity="center_horizontal|bottom"
+        app:sliderIndicatorMargin="16dp"
+        app:sliderIndicatorOrientation="horizontal"
+        app:sliderIndicatorPadding="4dp"
+        app:sliderIndicatorRadius="4dp"
+        app:sliderIndicatorSelectedColor="@color/colorAccent"
+        app:sliderIndicatorUnselectedColor="@color/textColor"
+        app:sliderStartAutoCycle="false"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

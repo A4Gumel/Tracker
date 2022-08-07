@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatCood"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".helpcenter.LiveChatActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/chatActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/chatToolbar"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="enterAlways"
+            app:navigationIcon="@drawable/ic_arrow_back">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/displayProfilePic"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:cropToPadding="true"
+                    app:civ_border_color="@color/colorAccent"
+                    app:civ_border_width="1dp"
+                    android:src="@drawable/eama_logo"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/displayUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="Display Username"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/displayProfilePic"
+                    app:layout_constraintStart_toEndOf="@+id/displayProfilePic"
+                    app:layout_constraintTop_toTopOf="@+id/displayProfilePic"
+                    app:layout_constraintVertical_bias="0.20" />
+
+                <TextView
+                    android:id="@+id/displayLastSeen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="Last seen :"
+                    android:textColor="@color/textColor"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/displayUsername"
+                    app:layout_constraintTop_toBottomOf="@+id/displayUsername" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="?actionBarSize">
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/messagesRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@id/messagesCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/messageListRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/messagesCardView"
+            android:layout_width="0dp"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
+            android:elevation="10dp"
+            android:visibility="invisible"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/sendMessageFab"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/inputMessage"
+            style="@style/AccEDTStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginStart="4dp"
+            app:boxBackgroundColor="@color/colorPrimary"
+            app:boxStrokeColor="@color/textColor"
+            app:layout_constraintStart_toEndOf="@id/fabMenu"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintEnd_toStartOf="@id/sendMessageFab">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/inputMessageEDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:hint="Type your message"
+                android:inputType="textMultiLine"
+                android:textSize="16sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:id="@+id/fabMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp"
+            app:fab_colorNormal="@color/colorAccent"
+            app:fab_colorPressed="@color/colorSecondary"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:menu_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorSecondary"
+            app:menu_openDirection="up">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/sendCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_camera"
+                android:tint="@color/colorPrimary"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorSecondary"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/sendPhoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_gallery"
+                android:tint="@color/colorPrimary"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorSecondary"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/sendFile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:layout_marginBottom="4dp"
+                android:src="@drawable/ic_file"
+                android:tint="@color/colorPrimary"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorSecondary"
+                app:fab_size="mini" />
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/sendAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:src="@drawable/ic_audio"
+                android:tint="@color/colorPrimary"
+                app:fab_colorNormal="@color/colorAccent"
+                app:fab_colorPressed="@color/colorSecondary"
+                app:fab_size="mini" />
+
+        </com.github.clans.fab.FloatingActionMenu>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/sendMessageFab"
+            style="@style/FABStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="?attr/colorAccent"
+            android:clickable="true"
+            android:focusable="true"
+            android:src="@drawable/ic_send"
+            android:tint="@color/colorPrimary"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="normal"
+            app:icon="@drawable/ic_send"
+            app:layout_constraintBottom_toBottomOf="@+id/messagesCardView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/messagesCardView"
+            app:layout_constraintTop_toTopOf="@+id/messagesCardView"
+            app:rippleColor="?attr/colorSecondary" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

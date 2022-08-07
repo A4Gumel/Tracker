@@ -1,0 +1,505 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:segmentedgroup="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/editProfileCood"
+    android:background="@color/colorAccent"
+    tools:context=".account.EditProfileActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/editProfileToolBar"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            android:transitionName="sharedToolbar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/edit_profile_title" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/editProfilePic"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/profile_image"
+                app:civ_border_color="@color/colorSecondary"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="4dp"
+                android:elevation="2dp"
+                android:focusable="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22sp"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="mudee_baba"
+                app:drawableStartCompat="@drawable/ic_username"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintBottom_toBottomOf="@+id/editProfilePic"
+                app:layout_constraintEnd_toStartOf="@+id/editProfilePic"
+                app:layout_constraintTop_toTopOf="@+id/editProfilePic" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/firstNameTextInput"
+                style="@style/AccEDTStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/first_name"
+                app:boxStrokeColor="@color/textColor"
+                app:boxStrokeErrorColor="#BF360C"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/editProfilePic"
+                app:startIconDrawable="@drawable/ic_account"
+                app:startIconTint="@color/textColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overlock_headline"
+                    android:inputType="textCapWords|textPersonName"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/lastNameTextInput"
+                style="@style/AccEDTStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/last_name"
+                app:boxStrokeColor="@color/textColor"
+                app:boxStrokeErrorColor="#BF360C"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstNameTextInput"
+                app:startIconDrawable="@drawable/ic_account"
+                app:startIconTint="@color/textColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overlock_headline"
+                    android:inputType="textPersonName|textCapWords"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:id="@+id/emailTv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/edit_profile_tv_bg"
+                android:drawablePadding="4dp"
+                android:elevation="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:focusable="true"
+                android:text="@string/email"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_email"
+                app:drawableEndCompat="@drawable/ic_change_email"
+                app:drawableTint="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameTextInput"
+                app:startIconDrawable="@drawable/ic_email"
+                tools:text="a4auwal@gmail.com" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/select_country_code"
+                android:textColor="@color/textColor"
+                app:layout_constraintBottom_toTopOf="@+id/ccp"
+                app:layout_constraintEnd_toStartOf="@+id/phoneTextInput"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/ccp" />
+
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:ccp_defaultLanguage="ENGLISH"
+                app:ccp_showNameCode="true"
+                app:ccp_autoDetectLanguage="true"
+                app:ccp_autoFormatNumber="true"
+                app:ccp_rememberLastSelection="true"
+                app:ccp_hintExampleNumber="true"
+                app:ccpDialog_searchEditTextTint="@color/textColor"
+                app:ccpDialog_textColor="@color/textColor"
+                app:ccp_autoDetectCountry="true"
+                app:ccpDialog_showTitle="false"
+                app:ccpDialog_showCloseIcon="true"
+                app:ccp_contentColor="@color/colorSecondary"
+                app:ccp_defaultNameCode="NG"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="@+id/phoneTextInput"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/phoneTextInput" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/phoneTextInput"
+                style="@style/AccEDTStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:hint="@string/phone_number"
+                app:boxStrokeColor="@color/textColor"
+                app:boxStrokeErrorColor="#BF360C"
+                app:errorEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/ccp"
+                app:layout_constraintTop_toBottomOf="@id/emailTv"
+                app:startIconTint="@color/textColor">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/phoneTextEdt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overlock_headline"
+                    android:inputType="numberDecimal"
+                    android:maxLength="16"
+                    android:maxLines="1"
+                    android:textSize="20sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            
+
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/editProfileFab"
+                style="@style/FABStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|end"
+                android:backgroundTint="?attr/colorAccent"
+                android:clickable="true"
+                android:contentDescription="@string/edit_profile"
+                android:focusable="true"
+                android:src="@drawable/ic_add_a_photo"
+                android:tint="@color/colorPrimary"
+                android:transitionName="sharedFab"
+                app:backgroundTint="@color/colorAccent"
+                app:fabSize="mini"
+                app:layout_constraintBottom_toBottomOf="@+id/editProfilePic"
+                app:layout_constraintEnd_toEndOf="@+id/editProfilePic"
+                app:pressedTranslationZ="12dp"
+                app:rippleColor="?attr/colorSecondary" />
+
+            <TextView
+                android:id="@+id/genderTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/gender_select"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/phoneTextInput" />
+
+            <info.hoang8f.android.segmented.SegmentedGroup
+                android:id="@+id/segmentedRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                app:sc_checked_text_color="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genderTv"
+                app:sc_border_width="2dp"
+                segmentedgroup:sc_tint_color="@color/textColor"
+                app:sc_corner_radius="16dp">
+
+                <RadioButton
+                    android:id="@+id/maleGender"
+                    style="@style/RadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/overlock_headline"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:layout_margin="4dp"
+                    android:text="@string/male" />
+
+                <RadioButton
+                    android:id="@+id/femaleGender"
+                    style="@style/RadioButton"
+                    android:fontFamily="@font/overlock_headline"
+                    android:layout_width="wrap_content"
+                    android:textSize="20sp"
+                    android:padding="8dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/female" />
+
+            </info.hoang8f.android.segmented.SegmentedGroup>
+
+
+            <TextView
+                android:id="@+id/dobTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/date_of_birth"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/segmentedRadioGroup" />
+
+            <TextView
+                android:id="@+id/dobTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:background="@drawable/edit_profile_tv_bg"
+                android:drawablePadding="4dp"
+                android:elevation="2dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginStart="16dp"
+                android:focusable="true"
+                android:text="@string/birth_date"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_date_calender"
+                app:drawableTint="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dobTitleTv"
+                tools:text="22/10/2020" />
+
+            <TextView
+                android:id="@+id/currencyTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/select_currency"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dobTv" />
+
+            <TextView
+                android:id="@+id/currencyTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_profile_tv_bg"
+                android:drawablePadding="8dp"
+                android:elevation="2dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:text="@string/currency"
+                android:drawableTint="@color/textColor"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:focusable="true"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_currency"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/currencyTitleTv"
+                tools:text="Nigerian Naira" />
+
+
+            <TextView
+                android:id="@+id/countryTitleTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/country"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/currencyTv" />
+
+            <TextView
+                android:id="@+id/countryTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edit_profile_tv_bg"
+                android:drawablePadding="8dp"
+                android:elevation="2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:paddingStart="16dp"
+                android:text="@string/country"
+                android:drawableTint="@color/textColor"
+                android:paddingEnd="16dp"
+                android:focusable="true"
+                android:fontFamily="@font/overlock_headline"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:drawableStartCompat="@drawable/ic_location"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/countryTitleTv"
+                tools:text="Nigeria" />
+
+
+            <com.google.android.material.checkbox.MaterialCheckBox
+                android:id="@+id/isOrganisation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:checked="false"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/overlock_headline"
+                android:text="@string/is_organisation"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:useMaterialThemeColors="false"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/countryTv" />
+
+            <TextView
+                android:id="@+id/isOrganisationTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/upload_proof_need"
+                android:textColor="@color/textColor"
+                android:textSize="12sp"
+                android:layout_marginStart="4dp"
+                app:layout_constraintBottom_toBottomOf="@id/isOrganisation"
+                app:layout_constraintStart_toEndOf="@+id/isOrganisation"
+                app:layout_constraintTop_toTopOf="@id/isOrganisation" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/certificateImg"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:layout_marginTop="16dp"
+                app:riv_border_width="2dp"
+                android:visibility="gone"
+                app:riv_corner_radius="16dp"
+                android:src="@drawable/profile_image"
+                app:riv_border_color="@color/colorSecondary"
+                app:layout_constraintTop_toBottomOf="@id/isOrganisation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dobDone"
+                style="@style/AccButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/colorSecondary"
+                android:clickable="true"
+                android:focusable="true"
+                android:hint="@string/update"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/certificateImg" />
+
+            <TextView
+                android:id="@+id/uploadCertTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/upload_certificate"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/certificateImg"
+                app:layout_constraintEnd_toEndOf="@+id/certificateImg"
+                app:layout_constraintStart_toStartOf="@+id/certificateImg"
+                app:layout_constraintTop_toTopOf="@+id/certificateImg" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

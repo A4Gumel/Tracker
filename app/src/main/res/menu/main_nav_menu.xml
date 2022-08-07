@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navHelpCenter"
+        android:title="@string/dash_help_center"
+        android:icon="@drawable/ic_live_help">
+    </item>
+
+    <item
+        android:id="@+id/navLiveChat"
+        android:title="@string/live_chat"
+        android:icon="@drawable/ic_support_agent"
+        android:contentDescription="@string/faqs">
+    </item>
+
+    <item android:title="@string/nav_social_media">
+
+        <menu>
+
+            <item android:id="@+id/navFacebook"
+                android:title="@string/nav_facebook"
+                android:icon="@drawable/ic_facebook_logo">
+            </item>
+
+            <item android:id="@+id/navTwitter"
+                android:title="@string/nav_twitter"
+                android:icon="@drawable/ic_twitter">
+            </item>
+
+            <item android:id="@+id/navInstagram"
+                android:title="@string/nav_instagram"
+                android:icon="@drawable/ic_instagram"
+                tools:targetApi="o">
+            </item>
+
+            <item
+                android:id="@+id/navLinkedIn"
+                android:icon="@drawable/ic_linked_in"
+                android:title="@string/nav_linkedin" />
+
+        </menu>
+
+    </item>
+
+    <item android:title="@string/nav_more">
+
+        <menu>
+
+            <item android:id="@+id/nav_about_us"
+                android:title="@string/nav_about_us"
+                android:icon="@drawable/ic_info">
+            </item>
+
+            <item android:id="@+id/nav_developer"
+                android:title="@string/nav_developer"
+                android:icon="@drawable/ic_info">
+            </item>
+
+            <item android:id="@+id/nav_report_bug"
+                android:title="@string/report_bug"
+                android:icon="@drawable/ic_bug_report">
+            </item>
+
+            <item android:id="@+id/nav_policy"
+                android:title="@string/privacy_policy"
+                android:icon="@drawable/ic_round_policy">
+            </item>
+
+            <item android:id="@+id/nav_terms"
+                android:title="@string/terms"
+                android:icon="@drawable/ic_round_policy">
+            </item>
+
+            <item android:id="@+id/nav_open_source"
+                android:title="@string/open_source_license">
+            </item>
+
+            <item android:id="@+id/nav_logout"
+                android:title="@string/nav_log_out"
+                android:icon="@drawable/ic_logout">
+            </item>
+
+        </menu>
+
+    </item>
+
+</menu>

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.facebook.shimmer.ShimmerFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    app:shimmer_auto_start="true"
+    app:shimmer_base_alpha="0.2"
+    app:shimmer_base_color="@color/textColor"
+    app:shimmer_colored="true"
+    app:shimmer_highlight_alpha="1"
+    app:shimmer_highlight_color="@color/colorAccent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ProgressBar
+            android:id="@+id/progressBar3"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/totalNumRate" />
+
+        <TextView
+            android:id="@+id/avRating"
+            style="@style/TextAppearance.MaterialComponents.Headline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/overlock_headline"
+            android:text="4.3"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/oneStar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RatingBar
+            android:id="@+id/avRatingBar"
+            style="@android:style/Widget.Material.Light.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:numStars="5"
+            android:rating="86"
+            app:layout_constraintEnd_toEndOf="@+id/avRating"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/avRating"
+            app:layout_constraintTop_toBottomOf="@+id/avRating" />
+
+        <TextView
+            android:id="@+id/fiveStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="5"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avRating"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_normal_bg"
+            app:layout_constraintBottom_toBottomOf="@id/fiveStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fiveStars"
+            app:layout_constraintTop_toTopOf="@+id/fiveStars" />
+
+        <View
+            android:id="@+id/fiveStarsBar"
+            android:layout_width="200dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_color_bg"
+            app:layout_constraintBottom_toBottomOf="@id/fiveStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fiveStars"
+            app:layout_constraintTop_toTopOf="@+id/fiveStars" />
+
+        <TextView
+            android:id="@+id/fourStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="4"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avRating"
+            app:layout_constraintTop_toBottomOf="@id/fiveStars" />
+
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_normal_bg"
+            app:layout_constraintBottom_toBottomOf="@id/fourStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fourStars"
+            app:layout_constraintTop_toTopOf="@+id/fourStars" />
+
+        <View
+            android:id="@+id/fourStarsBar"
+            android:layout_width="220dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_color_bg"
+            app:layout_constraintBottom_toBottomOf="@id/fourStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/fourStars"
+            app:layout_constraintTop_toTopOf="@+id/fourStars" />
+
+        <TextView
+            android:id="@+id/threeStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="3"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avRating"
+            app:layout_constraintTop_toBottomOf="@id/fourStars" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_normal_bg"
+            app:layout_constraintBottom_toBottomOf="@id/threeStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/threeStars"
+            app:layout_constraintTop_toTopOf="@+id/threeStars" />
+
+        <View
+            android:id="@+id/threeStarsBar"
+            android:layout_width="60dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_color_bg"
+            app:layout_constraintBottom_toBottomOf="@id/threeStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/threeStars"
+            app:layout_constraintTop_toTopOf="@+id/threeStars" />
+
+        <TextView
+            android:id="@+id/twoStars"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="2"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avRating"
+            app:layout_constraintTop_toBottomOf="@id/threeStars" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_normal_bg"
+            app:layout_constraintBottom_toBottomOf="@id/twoStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/twoStars"
+            app:layout_constraintTop_toTopOf="@+id/twoStars" />
+
+        <View
+            android:id="@+id/twoStarsBar"
+            android:layout_width="100dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_color_bg"
+            app:layout_constraintBottom_toBottomOf="@id/twoStars"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/twoStars"
+            app:layout_constraintTop_toTopOf="@+id/twoStars" />
+
+        <TextView
+            android:id="@+id/oneStar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="1"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/avRating"
+            app:layout_constraintTop_toBottomOf="@id/twoStars" />
+
+        <View
+            android:layout_width="240dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_normal_bg"
+            app:layout_constraintBottom_toBottomOf="@id/oneStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/oneStar"
+            app:layout_constraintTop_toTopOf="@+id/oneStar" />
+
+        <View
+            android:id="@+id/oneStarBar"
+            android:layout_width="180dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/rating_color_bg"
+            app:layout_constraintBottom_toBottomOf="@id/oneStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/oneStar"
+            app:layout_constraintTop_toTopOf="@+id/oneStar" />
+
+        <TextView
+            android:id="@+id/totalNumRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="4875746582356"
+            android:textColor="@color/textColor"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="@+id/avRatingBar"
+            app:layout_constraintStart_toStartOf="@+id/avRatingBar"
+            app:layout_constraintTop_toBottomOf="@+id/avRatingBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.facebook.shimmer.ShimmerFrameLayout>

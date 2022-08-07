@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/productListCard"
+        app:layout_constraintStart_toStartOf="@+id/productListCard"
+        app:layout_constraintTop_toBottomOf="@+id/productListCard" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/productListCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:rippleColor="@color/colorAccent">
+
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/reviewsShimmer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shimmer_auto_start="true"
+            app:shimmer_base_alpha="0.2"
+            app:shimmer_base_color="@color/textColor"
+            app:shimmer_colored="true"
+            app:shimmer_highlight_alpha="1"
+            app:shimmer_highlight_color="@color/colorAccent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/reviewerProfilePic"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"
+                    android:src="@drawable/profile_image"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/reviewerUsername"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/overlock_headline"
+                    android:text="\@A4Gumel"
+                    android:textColor="@color/colorSecondary"
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toTopOf="@+id/reviewStars"
+                    app:layout_constraintStart_toEndOf="@+id/reviewerProfilePic"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <RatingBar
+                    android:id="@+id/reviewStars"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:numStars="5"
+                    android:rating="78"
+                    app:layout_constraintBottom_toBottomOf="@id/reviewerProfilePic"
+                    app:layout_constraintStart_toEndOf="@+id/reviewerProfilePic"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewerUsername" />
+
+                <TextView
+                    android:id="@+id/reviewDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="Mon 12 Oct, 2020"
+                    android:textColor="@color/textColor"
+                    app:layout_constraintBottom_toTopOf="@+id/reviewTime"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/reviewerProfilePic"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
+                <TextView
+                    android:id="@+id/reviewTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="12:30 pm"
+                    android:textColor="@color/textColor"
+                    app:layout_constraintBottom_toBottomOf="@id/reviewerProfilePic"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/reviewDate" />
+
+                <TextView
+                    android:id="@+id/reviewText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="TextView"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/reviewerProfilePic"
+                    app:layout_constraintTop_toBottomOf="@id/reviewerProfilePic" />
+
+                <ImageView
+                    android:id="@+id/likesImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_like_outline"
+                    app:layout_constraintEnd_toStartOf="@id/numLikes"
+                    app:layout_constraintTop_toBottomOf="@id/reviewText"
+                    app:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/numLikes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/raleway_subtitle"
+                    android:text="50k"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@id/likesImg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/likesImg" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

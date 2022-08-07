@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/shippingTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Shipping: NGN 999 / per piece"
+        android:textColor="@color/textColor"
+        android:textStyle="bold"
+        android:fontFamily="@font/overlock_headline"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shippingComName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Via: Kabo Air Nigeria"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/raleway_subtitle"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/shippingTitle"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/estimatedDelivery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Estimated Delivery :40 - 100 days"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/raleway_subtitle"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/shippingComName"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/trackingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:text="Tracking: Realtime"
+        android:textColor="@color/textColor"
+        android:fontFamily="@font/raleway_subtitle"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/estimatedDelivery"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <RadioButton
+        android:id="@+id/selectShippingCompany"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/trackingType"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/shippingTitle" />
+
+    <TextView
+        android:id="@+id/typeOfShipping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:text="Air"
+        android:fontFamily="@font/raleway_subtitle"
+        android:textColor="@color/textColor"
+        app:tint="@color/colorAccent"
+        android:textStyle="bold"
+        android:drawablePadding="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/shippingTitle"
+        app:layout_constraintTop_toTopOf="parent"
+        app:drawableStartCompat="@drawable/ic_tracking_2"
+        app:drawableTint="@color/colorAccent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

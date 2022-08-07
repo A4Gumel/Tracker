@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="6dp"
+                app:cardElevation="4dp"
+                app:rippleColor="@color/colorAccent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/basicInfoTv">
+
+                <ir.apend.slider.ui.Slider
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/basicInfoTv"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="@string/just_for_you"
+                android:elevation="2dp"
+                app:drawableStartCompat="@drawable/ic_wish_list"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/justForYouRV"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbarSize="2dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/basicInfoTv"
+                tools:itemCount="10"
+                tools:listitem="@layout/product_list_layout" />
+
+            <TextView
+                android:id="@+id/adsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Ads Just For You"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                android:fontFamily="@font/overlock_headline"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/justForYouRV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/adsRv"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbarSize="2dp"
+                android:padding="8dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adsTv"
+                tools:itemCount="10"
+                tools:listitem="@layout/home_list_layout" />
+
+            <TextView
+                android:id="@+id/trendingTv"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:elevation="2dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="@string/trending"
+                app:drawableStartCompat="@drawable/ic_trending"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/adsRv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/trendingRV"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                tools:listitem="@layout/product_list_layout"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:itemCount="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trendingTv" />
+
+            <TextView
+                android:id="@+id/featuredTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Featured"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                android:fontFamily="@font/overlock_headline"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/trendingRV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featuredRv"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbarSize="2dp"
+                android:padding="8dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/featuredTv"
+                tools:itemCount="10"
+                tools:listitem="@layout/home_list_layout" />
+
+            <TextView
+                android:id="@+id/newArrivalTV"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="@string/new_arrivals"
+                android:elevation="2dp"
+                app:drawableStartCompat="@drawable/ic_new_arrivals"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/featuredRv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/newArrivalRV"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                tools:listitem="@layout/product_list_layout"
+                tools:itemCount="10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newArrivalTV" />
+
+
+            <TextView
+                android:id="@+id/couponsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Coupons"
+                android:textAllCaps="true"
+                android:textColor="@color/colorSecondary"
+                android:textSize="18sp"
+                android:fontFamily="@font/overlock_headline"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/newArrivalRV" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/couponsRv"
+                android:layout_width="match_parent"
+                android:layout_height="164dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:scrollbarSize="2dp"
+                android:padding="8dp"
+                android:scrollbars="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couponsTv"
+                tools:itemCount="10"
+                tools:listitem="@layout/home_list_layout" />
+
+            <TextView
+                android:id="@+id/bestsellerTV"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="@string/best_seller"
+                android:elevation="2dp"
+                app:drawableEndCompat="@drawable/ic_right_arrow"
+                app:drawableStartCompat="@drawable/ic_best_seller"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/couponsRv" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/bestSellerRV"
+                android:layout_width="match_parent"
+                android:layout_height="256dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                tools:itemCount="10"
+                tools:listitem="@layout/product_list_layout"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bestsellerTV" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/checkoutFab"
+            style="@style/FABStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="?attr/colorAccent"
+            android:clickable="true"
+            android:contentDescription="@string/shopping_cart"
+            android:focusable="true"
+            android:src="@drawable/ic_cart"
+            android:tint="@color/colorPrimary"
+            app:backgroundTint="@color/colorAccent"
+            app:fabSize="normal"
+            app:rippleColor="?attr/colorSecondary" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loginSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:paddingBottom="24dp">
+
+    <TextView
+        android:id="@+id/loginTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:gravity="center"
+        android:letterSpacing="0.22"
+        android:text="@string/transporter_login"
+        android:textAllCaps="true"
+        android:textColor="@color/colorSecondary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginTitle" />
+
+    <LinearLayout
+        android:id="@+id/loginMainContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginUsername"
+            style="@style/AccEDTStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/email"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="#BF360C"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout1"
+            app:startIconTint="@color/textColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overlock_headline"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/loginPassword"
+            style="@style/AccEDTStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="24dp"
+            android:hint="@string/password"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="#BF360C"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginUsername"
+            app:passwordToggleContentDescription="Show Password"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/textColor"
+            app:startIconTint="@color/textColor">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/overlock_headline"
+                android:inputType="textPassword"
+                android:imeOptions="actionGo"
+                android:maxLines="1"
+                android:textSize="18sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/loginRememberMe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/overlock_headline"
+            android:text="Remember Me"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            android:visibility="gone"
+            app:errorEnabled="true"
+            app:layout_constraintStart_toStartOf="@+id/loginPassword"
+            app:layout_constraintTop_toBottomOf="@+id/loginPassword" />
+
+
+        <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/color_accent_btn_bg"
+            android:fontFamily="@font/raleway_subtitle"
+            android:onClick="loginUser"
+            android:text="@string/login"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@id/loginPassword"
+            app:layout_constraintStart_toStartOf="@id/loginPassword"
+            app:layout_constraintTop_toBottomOf="@id/loginRememberMe"
+            app:pb_colorCompleteText="@color/colorPrimary"
+            app:pb_colorErrorText="@color/textColor"
+            app:pb_colorIndicator="@color/colorAccent"
+            app:pb_colorProgress="@color/colorAccent"
+            app:pb_cornerRadius="48dp"
+            app:pb_iconComplete="@drawable/ic_round_check_circle"
+            app:pb_iconError="@drawable/ic_round_cancel_48"
+            app:pb_isIndeterminate="true"
+            app:pb_selectorComplete="@color/colorAccent"
+            app:pb_selectorError="@color/errorColor"
+            app:pb_selectorIdle="@color/colorSecondary"
+            app:pb_textColorAfterClick="@color/colorAccent"
+            app:pb_textIdle="@string/login" />
+
+
+        <LinearLayout
+            android:id="@+id/loginAttemptLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/loginButton">
+
+            <TextView
+                android:id="@+id/loginAttemptTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="4dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/login_attempt_error"
+                android:textColor="@color/errorColor"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/loginAttemptTimer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:textColor="@color/errorColor"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="59:00 s" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/loginSuccessContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout1">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/successAnim"
+            android:layout_width="match_parent"
+            android:layout_height="188dp"
+            android:layout_margin="24dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/login_success_redirecting"
+            android:textColor="@color/colorAccent"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+

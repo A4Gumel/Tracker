@@ -1,0 +1,104 @@
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="24dp"
+        android:paddingStart="24dp"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/rememberMeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/log_in_as"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/overlock_headline"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/rememberMeProfilePic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/profile_image"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rememberMeTitle" />
+
+        <TextView
+            android:id="@+id/rememberMeFullName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/rememberMeProfilePic"
+            app:layout_constraintStart_toStartOf="@+id/rememberMeProfilePic"
+            app:layout_constraintTop_toBottomOf="@+id/rememberMeProfilePic"
+            tools:text="Auwal Alhassan Abubakar" />
+
+        <TextView
+            android:id="@+id/rememberMeUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:textColor="@color/textColor"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="@+id/rememberMeFullName"
+            app:layout_constraintStart_toStartOf="@+id/rememberMeFullName"
+            app:layout_constraintTop_toBottomOf="@+id/rememberMeFullName"
+            tools:text="\@a4auwal" />
+
+        <TextView
+            android:id="@+id/notUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/overlock_headline"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="@string/no"
+            android:textColor="@color/textColor"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/yesLogin"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rememberMeUsername" />
+
+        <TextView
+            android:id="@+id/yesLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:fontFamily="@font/overlock_headline"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:text="@string/yes"
+            android:textColor="@color/colorAccent"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/notUser"
+            app:layout_constraintTop_toBottomOf="@+id/rememberMeUsername" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

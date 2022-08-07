@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/selectBankSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/withdrawTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:letterSpacing="0.22"
+        android:text="@string/withdraw"
+        android:textAllCaps="true"
+        android:textColor="@color/colorSecondary"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical"/>
+
+
+    <TextView
+        android:id="@+id/bankTv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:background="@drawable/edit_profile_tv_bg"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_bank"
+        app:drawableTint="@color/textColor"
+        tools:text="Nigeria" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/accNumTextInput"
+        style="@style/AccEDTStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/account_number"
+        app:boxStrokeColor="@color/textColor"
+        app:startIconTint="@color/textColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_subtitle"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/amountTextInput"
+        style="@style/AccEDTStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/amount"
+        app:helperTextTextColor="@color/textColor"
+        app:helperTextEnabled="true"
+        app:helperText="@string/amount_to_withdraw"
+        app:boxStrokeColor="@color/textColor"
+        app:startIconTint="@color/textColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_subtitle"
+            android:inputType="numberDecimal"
+            android:maxLines="1"
+            android:imeOptions="actionNext"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/confirmPasswordTextInput"
+        style="@style/AccEDTStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:hint="@string/confirm_password"
+        app:boxStrokeColor="@color/textColor"
+        app:helperTextTextColor="@color/textColor"
+        app:helperTextEnabled="true"
+        app:startIconDrawable="@drawable/ic_password"
+        app:helperText="@string/confirm_password_help"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/textColor"
+        app:startIconTint="@color/textColor">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_subtitle"
+            android:inputType="textPassword"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <TextView
+        android:id="@+id/bankAccountName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:visibility="gone"
+        android:background="@drawable/edit_profile_tv_bg"
+        android:drawablePadding="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/overlock_headline"
+        android:gravity="center_horizontal|center_vertical"
+        android:padding="12dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textColor="@color/textColor"
+        android:textSize="18sp"
+        app:drawableStartCompat="@drawable/ic_user"
+        app:drawableTint="@color/textColor"
+        tools:text="John Doe" />
+
+    <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+        android:id="@+id/withdrawContinueBtn"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/color_accent_btn_bg"
+        android:fontFamily="@font/raleway_subtitle"
+        android:onClick="verifyOTP"
+        android:text="@string/str_continue"
+        android:textColor="@color/colorPrimary"
+        android:textSize="18sp"
+        app:pb_colorCompleteText="@color/colorPrimary"
+        app:pb_colorErrorText="@color/textColor"
+        app:pb_colorIndicator="@color/colorAccent"
+        app:pb_colorProgress="@color/colorAccent"
+        app:pb_cornerRadius="48dp"
+        app:pb_iconComplete="@drawable/ic_round_check_circle"
+        app:pb_iconError="@drawable/ic_round_cancel_48"
+        app:pb_isIndeterminate="true"
+        app:pb_selectorComplete="@color/colorAccent"
+        app:pb_selectorError="@color/errorColor"
+        app:pb_selectorIdle="@color/colorSecondary"
+        app:pb_textColorAfterClick="@color/colorAccent"
+        app:pb_textIdle="@string/str_continue" />
+
+</LinearLayout>

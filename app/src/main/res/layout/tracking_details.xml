@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/darkModeSheet"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/trackingDetailsTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/raleway_subtitle"
+        android:letterSpacing="0.22"
+        android:text="@string/details"
+        android:textAllCaps="true"
+        android:textColor="@color/colorSecondary"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/colorSecondary"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trackingDetailsTitle" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linearLayout1">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="@string/order_amount"
+            android:textColor="@color/textColor"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/drivingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/overlock_headline"
+            android:letterSpacing="0.00735294118"
+            android:textColor="@color/colorSecondary"
+            android:textSize="30sp"
+            android:textStyle="normal"
+            tools:text="NGN 8999" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/orderIdChip"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="0.8"
+            android:backgroundTint="@color/colorAccent"
+            android:checked="true"
+            android:clickable="false"
+            android:fontFamily="@font/raleway_subtitle"
+            android:maxLength="28"
+            android:textColor="@color/colorPrimary"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:chipBackgroundColor="@color/colorAccent"
+            app:rippleColor="@color/textGray"
+            tools:text="NG-KN-9876547868769876789876" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_my_location_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorSecondary"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/warehouseLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/raleway_subtitle"
+                tools:text="Hotoro Maiduguri Road"
+                android:textColor="@color/textColor"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="8dp"
+            android:src="@drawable/ic_arrow_circle_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/colorSecondary"
+            tools:ignore="ContentDescription" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:ignore="UseCompoundDrawables">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:src="@drawable/ic_location_24"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorSecondary" />
+
+            <TextView
+                android:id="@+id/orderLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/raleway_subtitle"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                tools:text="Mariri Maiduguri Road" />
+
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/distanceTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.8"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/distance"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toStartOf="@+id/timeTv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toEndOf="@+id/quantityCountTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/distanceCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/distanceTv"
+                app:layout_constraintEnd_toEndOf="@id/distanceTv"
+                app:layout_constraintTop_toBottomOf="@id/distanceTv"
+                tools:text="10KM" />
+
+
+            <TextView
+                android:id="@+id/timeTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.8"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/time"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toStartOf="@+id/weightTV"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/distanceTv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/timeCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/timeTv"
+                app:layout_constraintStart_toStartOf="@id/timeTv"
+                app:layout_constraintEnd_toEndOf="@id/timeTv"
+                tools:text="1:00 hrs" />
+
+
+            <TextView
+                android:id="@+id/weightTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.8"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/weight"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toStartOf="@+id/quantityTv"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/timeTv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/weightCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:textColor="@color/textColor"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/weightTV"
+                app:layout_constraintStart_toStartOf="@id/weightTV"
+                app:layout_constraintEnd_toEndOf="@id/weightTV"
+                tools:text="100KG" />
+
+            <TextView
+                android:id="@+id/quantityTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:alpha="0.8"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/quantity"
+                android:textColor="@color/textColor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/weightTV"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/quantityCountTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:textColor="@color/textColor"
+                app:layout_constraintStart_toStartOf="@id/quantityTv"
+                app:layout_constraintTop_toBottomOf="@id/quantityTv"
+                app:layout_constraintEnd_toEndOf="@id/quantityTv"
+                android:textStyle="bold"
+                tools:text="100" />
+
+
+            <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+                android:id="@+id/acceptTrackingOrder"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/color_accent_btn_bg"
+                android:fontFamily="@font/raleway_subtitle"
+                android:text="@string/accept"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/ic_directions_car"
+                app:iconTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/distanceCountTv"
+                app:pb_colorCompleteText="@color/colorPrimary"
+                app:pb_colorErrorText="@color/textColor"
+                app:pb_colorIndicator="@color/colorAccent"
+                app:pb_colorProgress="@color/colorAccent"
+                app:pb_cornerRadius="48dp"
+                app:pb_iconComplete="@drawable/ic_round_check_circle"
+                app:pb_iconError="@drawable/ic_round_cancel_48"
+                app:pb_isIndeterminate="true"
+                app:pb_selectorComplete="@color/colorAccent"
+                app:pb_selectorError="@color/errorColor"
+                app:pb_selectorIdle="@color/colorSecondary"
+                app:pb_textColorAfterClick="@color/colorAccent"
+                app:pb_textIdle="@string/accept" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/rejectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/colorPrimary"
+                android:gravity="center"
+                android:text="@string/reject"
+                android:textColor="@color/errorColor"
+                app:cornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/acceptTrackingOrder"
+                app:strokeColor="@color/errorColor"
+                app:strokeWidth="2dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

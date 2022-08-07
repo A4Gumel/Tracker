@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_phone_num.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_seller_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_tracker_main.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/bank_account_info.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/banks_list_layout.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/dark_mode_layout.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/dismiss_dialog.xml" value="0.12454710144927536" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/driver_info_layout.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/driver_nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/forgot_password_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_account.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_driver_map.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_seller_home.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_seller_products.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_tracker_home.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_tracker_request.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_wallet.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/home_banner_image.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/home_map_bottom.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/login_layout.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/main_nav_header.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/permission_request_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/product_list_layout.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/profile_layout.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/select_bank.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/seller_request_layout.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/seller_top_layout.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/shimmer_orders.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/splash_screen.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/tracking_details.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/tracking_request.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/AndroidStudioProjects/EAMA_Tracker/app/src/main/res/layout/withdraw_layout.xml" value="0.1403985507246377" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/debug/res/xml/settings_prefs.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable-mdpi/ic_facebook_messenger.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable-mdpi/ic_linked_in.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable-mdpi/ic_twitter.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable-v24/splash_screen.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable-xxhdpi/ic_forgot_password.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/alert_dialog_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/bottom_nav_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/bottom_sheet_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/color_accent_btn_bg.xml" value="0.175" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/edit_profile_tv_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/home_tv_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_check.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_complete_orders.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_coupon_tag.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_email.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_grade_1.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_location_24.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_location_off.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_location_off_24.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_logout.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_menu.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_my_loaction_24.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_my_location_24.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_outline_live_help.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_person_rating.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_phone_otp.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_round_cancel_48.xml" value="0.175" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_round_check_circle.xml" value="0.15625" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_round_warning.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_star_border.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_stars_rate.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_trash_can_empty.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/ic_voice_chat_round.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/login_button_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/shimmer_rounded_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/tv_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/drawable/wallet_bottom_bg.xml" value="0.19947916666666668" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/about_eama_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/about_earewa_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/account_done_dialog.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_account.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_help_center.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_launch.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_live_chat.xml" value="0.16875" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_main.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_maps.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_phone_num.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_seller_main.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_tracker_main.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/activity_web.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/bank_account_info.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/banks_list_layout.xml" value="0.12" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/basic_info_shimmer.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/dark_mode_layout.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/dismiss_dialog.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/driver_info_layout.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/driver_nav_header.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/forgot_password_dialog.xml" value="0.15885416666666666" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_account.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_driver_map.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_seller_home.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_seller_products.xml" value="0.1" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_seller_request.xml" value="0.13606494008504058" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_tracker_home.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_tracker_request.xml" value="0.10429629629629629" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/fragment_wallet.xml" value="0.14666666666666667" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/home_banner_image.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/home_map_bottom.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/inactive_internet_alert.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/loading_alert_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/login_layout.xml" value="0.16666666666666666" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/logout_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/main_nav_header.xml" value="0.6" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/map_bottom_tracking.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/no_orders_layout.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/no_request_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/null_content_view.xml" value="0.17798913043478262" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/permission_request_dialog.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/product_list_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/profile_layout.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/select_bank.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/seller_request_layout.xml" value="0.3680555555555556" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/seller_top_layout.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/shimmer_orders.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/shimmer_wallet.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/splash_screen.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/tracking_details.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/tracking_request.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/layout/withdraw_layout.xml" value="0.22" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/menu/main_nav_menu.xml" value="0.5" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/menu/products_list_menu.xml" value="0.5" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/menu/seller_bottom_nav_menu.xml" value="0.18333333333333332" />
+        <entry key="..\:/Users/auwal/StudioProjects/EAMA_Tracker/app/src/main/res/menu/tracker_bottom_nav_menu.xml" value="0.18333333333333332" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

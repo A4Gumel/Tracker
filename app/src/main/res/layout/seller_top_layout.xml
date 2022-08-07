@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sellerInfoCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/sellerInfoTopContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:background="@color/colorPrimary">
+
+            <ImageView
+                android:id="@+id/greetingImg"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_sunrise_svgrepo_com"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/greetingTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:text="Good Morning"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/greetingImg"
+                app:layout_constraintStart_toEndOf="@+id/greetingImg"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/usernameTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/overlock_headline"
+                android:text="A4Gumel"
+                android:textColor="@color/colorSecondary"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/sellerProfilePic"
+                app:layout_constraintStart_toEndOf="@+id/greetingImg"
+                app:layout_constraintTop_toBottomOf="@+id/greetingTv" />
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/sellerProfilePic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_admin_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_border_color="@color/colorSecondary"
+                app:riv_border_width="4dp"
+                app:riv_corner_radius="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:layout_marginTop="8dp"
+            android:text="Total Transactions"/>
+
+        <TextView
+            android:id="@+id/sellerTotalTrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/overlock_headline"
+            android:layout_marginTop="8dp"
+            android:text="900"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:layout_marginTop="16dp"
+            android:text="Pending Transactions"/>
+
+        <TextView
+            android:id="@+id/sellerPendingTranz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/overlock_headline"
+            android:layout_marginTop="8dp"
+            android:text="900"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/textColor"
+            android:textSize="14sp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:layout_marginTop="16dp"
+            android:text="Balance"/>
+
+        <TextView
+            android:id="@+id/sellerWalletBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|center_horizontal"
+            android:textColor="@color/colorPrimary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/overlock_headline"
+            android:layout_marginTop="4dp"
+            android:text="$ 900"
+            android:layout_marginBottom="8dp"/>
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

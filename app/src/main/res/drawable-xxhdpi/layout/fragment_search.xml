@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.SearchFragment">
+
+    <ProgressBar
+        android:id="@+id/searchHorizontalLoading"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:elevation="1dp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/productSearchScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <AutoCompleteTextView
+                android:id="@+id/productSearchText"
+                android:layout_width="220dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawableStart="@drawable/ic_search"
+                android:drawablePadding="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:hint="@string/Search"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:maxLines="1"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textColor="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:completionHint="Product search text"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/colorPrimary" />
+
+
+            <include
+                android:id="@+id/searchListShimmer"
+                android:layout_width="match_parent"
+                layout="@layout/shimmer_search_list"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/productSearchText" />
+
+
+            <TextView
+                android:id="@+id/categoryTitleTv"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:elevation="4dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:text="@string/categories"
+                app:drawableStartCompat="@drawable/ic_category"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/chipsHorizontalScroll" />
+
+
+            <HorizontalScrollView
+                android:id="@+id/chipsHorizontalScroll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="6dp"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recentSearches" >
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/recentSearchChipsGroup"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    app:chipSpacingHorizontal="8dp"
+                    app:chipSpacing="8dp"
+                    app:singleLine="true"
+                    app:singleSelection="true">
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/recentSearches"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:drawablePadding="4dp"
+                android:text="@string/recent_searches"
+                android:textColor="@color/colorSecondary"
+                android:textSize="16sp"
+                app:drawableStartCompat="@drawable/ic_recent_search"
+                app:drawableTint="@color/colorSecondary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/productSearchText" />
+
+            <include
+                android:id="@+id/searchSuccessLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:visibility="invisible"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toBottomOf="@id/productSearchText"
+                layout="@layout/search_success_info_layout"/>
+
+
+            <ImageButton
+                android:id="@+id/deleteSearch"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="?attr/selectableItemBackground"
+                android:backgroundTint="?attr/colorSecondary"
+                android:clickable="true"
+                android:contentDescription="@string/delete_searches"
+                android:focusable="true"
+                app:layout_constraintBottom_toBottomOf="@+id/recentSearches"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/recentSearches"
+                app:layout_constraintTop_toBottomOf="@+id/productSearchText"
+                app:srcCompat="@drawable/ic_delete_forever" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/searchListRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="invisible"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchSuccessLayout"
+                tools:itemCount="10"
+                tools:listitem="@layout/search_list_layout" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/categoryRV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryTitleTv"
+                tools:listitem="@layout/category_list_layout" />
+
+
+            <include
+                android:id="@+id/searchNoResults"
+                layout="@layout/search_no_results_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="16dp" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/searchFilterFab"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:focusable="false"
+        android:fontFamily="@font/overlock_headline"
+        app:icon="@drawable/ic_sort"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:iconTint="@color/colorPrimary"
+        android:text="Filter"
+        android:textSize="20sp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        android:visibility="invisible"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="?attr/colorSecondary" />
+    
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

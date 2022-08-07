@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.DashboardFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/basicInfoTv"
+                style="@style/CaptionTextViewStyle"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/home_tv_bg"
+                android:drawablePadding="8dp"
+                android:elevation="4dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:gravity="center_horizontal|center_vertical"
+                android:padding="12dp"
+                android:focusable="true"
+                android:text="@string/dashboard"
+                app:drawableStartCompat="@drawable/ic_dashboard"
+                app:drawableTint="@color/colorPrimary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profileImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/profile_image"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/basicInfoTv"
+                app:riv_corner_radius="16dp" />
+
+            <TextView
+                android:id="@+id/accFullName"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/overlock_headline"
+                android:text="@string/user_anonymous"
+                android:textColor="@color/textColor"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toEndOf="@+id/profileImage"
+                app:layout_constraintTop_toTopOf="@+id/profileImage"
+                tools:text="Auwal Alhassan Abubakar" />
+
+            <TextView
+                android:id="@+id/accEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:textColor="@color/textColor"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@+id/accFullName"
+                app:layout_constraintTop_toBottomOf="@+id/accFullName"
+                tools:text="a4auwal@gmail.com" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/dashboardRv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileImage"
+                app:layout_constraintVertical_bias="0.0"
+                tools:itemCount="5"
+                android:layoutAnimation="@anim/layout_anim_slide_fom_right"
+                tools:listitem="@layout/dashboard_rv_layout" />
+
+            <ImageView
+                android:id="@+id/blueTick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/ic_blue_tick"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="@+id/accEmail"
+                app:layout_constraintStart_toEndOf="@+id/accEmail"
+                app:layout_constraintTop_toTopOf="@+id/accEmail"
+                android:contentDescription="@string/verified_email" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/editProfileFab"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:clickable="true"
+        android:contentDescription="@string/create_account"
+        android:elevation="8dp"
+        android:focusable="true"
+        android:src="@drawable/ic_create_acc"
+        android:tint="@color/colorPrimary"
+        android:translationZ="12dp"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:rippleColor="?attr/colorSecondary" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

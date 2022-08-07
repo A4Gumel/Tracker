@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:padding="24dp"
+    app:cardCornerRadius="24dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="8dp"
+        android:orientation="vertical">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/noInternetAnim"
+            android:layout_width="match_parent"
+            android:layout_height="224dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="false"
+            app:srcCompat="@raw/customer_service" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="@string/server_conn_server"
+            android:textColor="@color/errorColor"
+            android:textSize="20sp" />
+
+        <com.nihaskalam.progressbuttonlibrary.CircularProgressButton
+            android:id="@+id/retryBtn"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/raleway_subtitle"
+            android:text="@string/retry"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp"
+            app:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:pb_colorCompleteText="@color/colorPrimary"
+            app:pb_colorErrorText="@color/textColor"
+            app:pb_colorIndicator="@color/colorAccent"
+            app:pb_colorProgress="@color/colorAccent"
+            app:pb_cornerRadius="32dp"
+            app:pb_iconComplete="@drawable/ic_round_check_circle"
+            app:pb_iconError="@drawable/ic_round_cancel_48"
+            app:pb_isIndeterminate="true"
+            app:pb_selectorComplete="@color/colorAccent"
+            app:pb_selectorError="@color/errorColor"
+            app:pb_selectorIdle="@color/colorAccent"
+            app:pb_textColorAfterClick="@color/colorAccent"
+            app:pb_textIdle="@string/retry" />
+
+    </LinearLayout>
+
+
+</com.google.android.material.card.MaterialCardView>

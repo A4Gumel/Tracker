@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="2dp"
+    android:padding="2dp"
+    app:cardCornerRadius="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/viewProductImg"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:riv_border_color="@color/colorAccent"
+            app:riv_border_width="2dp"
+            app:riv_corner_radius="16dp"
+            tools:src="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/viewProductName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Product Name"
+            android:textSize="20sp"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/overlock_headline"
+            app:layout_constraintStart_toEndOf="@+id/viewProductImg"
+            app:layout_constraintTop_toTopOf="@+id/viewProductImg" />
+
+        <ImageView
+            android:id="@+id/viewTimeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:tint="@color/textColor"
+            app:layout_constraintStart_toEndOf="@+id/viewProductImg"
+            app:layout_constraintTop_toBottomOf="@+id/viewProductName"
+            app:srcCompat="@drawable/ic_access_time"
+            android:contentDescription="@string/viewed_product_img" />
+
+        <TextView
+            android:id="@+id/viewTimeDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:text="10:40am , 28/11/2020"
+            android:textColor="@color/textColor"
+            android:fontFamily="@font/raleway_subtitle"
+            app:layout_constraintBottom_toBottomOf="@+id/viewTimeIcon"
+            app:layout_constraintStart_toEndOf="@+id/viewTimeIcon"
+            app:layout_constraintTop_toTopOf="@+id/viewTimeIcon" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

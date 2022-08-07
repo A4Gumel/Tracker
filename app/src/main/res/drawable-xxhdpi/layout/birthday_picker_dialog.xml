@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:layout_margin="8dp"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/overlock_headline"
+            android:text="@string/dob_dialog_title"
+            android:textColor="@color/textColor"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobDay"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:boxBackgroundColor="@color/colorAccent"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/textColor"
+            app:layout_constraintBottom_toTopOf="@+id/dobCancel"
+            app:layout_constraintEnd_toStartOf="@+id/dobMonth"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:hint="@string/dob_day"
+                android:inputType="date"
+                android:maxLength="2"
+                android:textColor="@color/textColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobMonth"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            app:boxBackgroundColor="@color/colorAccent"
+            android:layout_marginEnd="8dp"
+            app:boxStrokeColor="@color/textColor"
+            app:hintTextColor="@color/textColor"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:errorEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/dobDone"
+            app:layout_constraintEnd_toStartOf="@+id/dobYear"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dobDay"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/dob_month"
+                android:textColor="@color/textColor"
+                android:fontFamily="@font/raleway_subtitle"
+                android:inputType="date"
+                android:maxLength="2" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dobYear"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/textColor"
+            app:boxBackgroundColor="@color/colorAccent"
+            app:boxStrokeColor="@color/textColor"
+            app:boxStrokeErrorColor="@color/design_default_color_error"
+            app:errorEnabled="true"
+            app:hintTextColor="@color/textColor"
+            app:layout_constraintBottom_toTopOf="@+id/dobDone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dobMonth"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_subtitle"
+                android:hint="@string/dob_year"
+                android:inputType="date"
+                android:maxLength="4"
+                android:textColor="@color/textColor" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dobDone"
+            style="@style/AccButton"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="@color/colorSecondary"
+            android:clickable="true"
+            android:focusable="true"
+            android:hint="@string/done"
+            android:layout_marginStart="16dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/dobCancel" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dobCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_marginBottom="16dp"
+            android:fontFamily="@font/overlock_headline"
+            android:text="@string/cancel"
+            android:visibility="invisible"
+            android:layout_marginEnd="16dp"
+            android:textColor="@color/textColor"
+            android:textStyle="bold"
+            app:cornerRadius="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/dobDone"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

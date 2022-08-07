@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/helpCood"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".helpcenter.HelpCenterActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/helpActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        app:liftOnScroll="true">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/helpToolbar"
+            style="@style/Widget.MaterialComponents.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_scrollFlags="enterAlways"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            app:title="@string/help_center_title" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/helpCenterScroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/helpAnim"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                app:srcCompat="@raw/customer_service"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:lottie_loop="true"
+                app:lottie_autoPlay="true"/>
+
+            <TextView
+                android:id="@+id/helpCenterTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="@font/raleway_subtitle"
+                android:gravity="center"
+                android:text="TextView fgbdhfvs hdjsgfdgfsdhfg vc dvs dsgfygdv dsmbjgd
+                hyfd dbshjhdf dhfdjghd fdhbgfdhgd \n Chat with real human not a bot ! \n You can contact our Customer support via the following channels:"
+                android:textColor="@color/textColor"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/helpAnim" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/helpListRv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                tools:itemCount="4"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/helpCenterTitle"
+                android:layoutAnimation="@anim/layout_fall_down_anim"
+                tools:listitem="@layout/help_center_rv_layout" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/startLiveChat"
+        style="@style/FABStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="?attr/colorAccent"
+        android:focusable="false"
+        android:fontFamily="@font/overlock_headline"
+        app:icon="@drawable/ic_send"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        app:iconTint="@color/colorPrimary"
+        android:text="Live Chat"
+        app:backgroundTint="@color/colorAccent"
+        app:fabSize="normal"
+        app:pressedTranslationZ="12dp"
+        app:rippleColor="?attr/colorSecondary" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
