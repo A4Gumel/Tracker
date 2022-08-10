@@ -7,7 +7,7 @@ public class RetrofitClient {
 
     // The Main API service client that support the app
 
-    private static final String BASE_URL = "https://weamamarket.com/";
+    private static final String BASE_URL = "https://<your-domain>/";
     private static RetrofitClient mInstance;
     private Retrofit mRetrofit;
 
